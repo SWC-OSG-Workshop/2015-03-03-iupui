@@ -6,12 +6,12 @@ We work directly on the `gh-pages` as it is useful for the website
 rendering. GitHub renders the website from the HTML and markdown 
 files kept under `gh-pages`. For example, the HTML and 
 markdown files of this branch are rendered at the url: 
-CurrentWebPage(http://swc-osg-workshop.github.io/general/). Since we want all the edits are 
+CurrentWebPage(http://swc-osg-workshop.github.io/2015-01-03-iupui/). Since we want all the edits are 
 displayed on the webpage and available to the participants, we want to directly work 
 on `gh-pages`. This is the standard practice recomended by the software carpentry. 
 
 
-The `general/gh-pages` repo contains the basic learning modules and necessary 
+The `gh-pages` branch contains the basic learning modules and necessary 
 tools to set up new websites for the up-comping worshops. In this repo, we will 
 update all the new materials and make generic changes to the woskshop front page. 
 
@@ -39,7 +39,7 @@ Now let us see how to make a copy of the existing repo on your locale machine.  
 desktop or laptop, clone the repo 
 
     ~~~
-     git clone https://github.com/SWC-OSG-Workshop/general.git
+     git clone https://github.com/SWC-OSG-Workshop/2015-01-03-iupui.git
     ~~~
 
 and create new branch named `gh-pages`.
@@ -95,27 +95,5 @@ Once finished editing the index.html, push content to the repository:
 ~~~
 
 As soon as the repo has been pushed to GitHub, GitHub will render the pages
-at the url(http://swc-osg-workshop.github.io/general)
-
-##New Repo for a New Workshop##
-
-As soon as the workshop date is finalized, create a repo by the name
-`YYYY-MM-DD`, where `YYYY` is the year, `MM` is the month and `DD` is the
-date of the workshop. The new repo  - `YYYY-MM-DD` should have the materials for the 
-workshop. The required materials already exist in `general` repo. Therefore we copy 
-the course material and web content from the `general` repo.  This can done in your local 
-Desktop or Laptop, type
-the followings
-
-~~~
- git clone https://github.com/SWC-OSG-Workshop/YYYY-MM-DD.git
- cd YYYY-MM-DD 
- git checkout -b gh-pages 
- git remote add general https://github.com/SWC-OSG-Workshop/general.git 
- git pull general gh-pages 
- git remote remove general 
-~~~
-
-Now you will have to change the workshop front page in the current repo `YYYY-MM-DD.git` as 
-outlined in the previous section.  
+at the url(http://swc-osg-workshop.github.io/2015-01-03-iupui.git)
 
