@@ -93,5 +93,5 @@ Once finished editing the index.html, push content to the repository:
 ~~~
 
 As soon as the repo has been pushed to GitHub, GitHub will render the pages
-at the url(http://swc-osg-workshop.github.io/2015-01-03-iupui.git)
+at the url(http://swc-osg-workshop.github.io/2015-01-03-iupui)
 
