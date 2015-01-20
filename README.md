@@ -6,7 +6,7 @@ We work directly on the `gh-pages` as it is useful for the website
 rendering. GitHub renders the website from the HTML and markdown 
 files kept under `gh-pages`. For example, the HTML and 
 markdown files of this branch are rendered at the url: 
-CurrentWebPage(http://swc-osg-workshop.github.io/2015-01-03-iupui/). Since we want all the edits are 
+CurrentWebPage (http://SWC-OSG-Workshop.github.io/2015-01-03-iupui ). 
 displayed on the webpage and available to the participants, we want to directly work 
 on `gh-pages`. This is the standard practice recomended by the software carpentry. 
 
@@ -93,5 +93,5 @@ Once finished editing the index.html, push content to the repository:
 ~~~
 
 As soon as the repo has been pushed to GitHub, GitHub will render the pages
-at the url(http://swc-osg-workshop.github.io/2015-01-03-iupui)
+at the URL http://SWC-OSG-Workshop/2015-01-03-iupui 
 
