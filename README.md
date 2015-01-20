@@ -21,7 +21,6 @@ The sections below explain:
 * __How to set up the git repo on your local machine.__
 * __How do we edit the course materails.__
 * __How do we edit the workshop front page.__
-* __How do we create a new repo for a new workshop.__
 
 
 **Table of Contents**
@@ -29,7 +28,6 @@ The sections below explain:
 *   [Getting Started](#getting-started)
 *   [Lesson Material](#lession-material)
 *   [Workshop Front Page](#workshop-frontpage)
-*   [New Repo for a New Workshop](#new-repo)
 
 ##Getting Started##
 ---------------
@@ -38,21 +36,21 @@ The sections below explain:
 Now let us see how to make a copy of the existing repo on your locale machine.  In your local 
 desktop or laptop, clone the repo 
 
-    ~~~
+~~~
      git clone https://github.com/SWC-OSG-Workshop/2015-01-03-iupui.git
-    ~~~
+~~~
 
 and create new branch named `gh-pages`.
 
-    ~~~
+~~~
      git checkout -b gh-pages
-    ~~~
+~~~
 
 Now pull the content repository's `gh-pages` branch into your desktop repository:
 
-    ~~~
+~~~
      git pull origin gh-pages
-    ~~~
+~~~
 ##Lesson Material##
 ---------------
 
@@ -62,11 +60,11 @@ written in Markdown, while the Python and SQL use the IPython Notebook.
 The material related to OSG is in the directory `novice/DHTC` and are written in Markdown.  Once 
 finished editing the material at `novice/DHTC/filename.md`, push the content to the repository:
 
-    ~~~
+~~~
      git add filename.md
      git commit -m "some message here about the changes " 
      git push origin gh-pages
-    ~~~
+~~~
 
 
 
