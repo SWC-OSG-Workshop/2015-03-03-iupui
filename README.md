@@ -6,7 +6,7 @@ We work directly on the `gh-pages` as it is useful for the website
 rendering. GitHub renders the website from the HTML and markdown 
 files kept under `gh-pages`. For example, the HTML and 
 markdown files of this branch are rendered at the url: 
-CurrentWebPage (http://SWC-OSG-Workshop.github.io/2015-01-03-iupui ). 
+CurrentWebPage (http://SWC-OSG-Workshop.github.io/2015-03-03-iupui ). 
 displayed on the webpage and available to the participants, we want to directly work 
 on `gh-pages`. This is the standard practice recomended by the software carpentry. 
 
@@ -37,7 +37,7 @@ Now let us see how to make a copy of the existing repo on your locale machine.  
 desktop or laptop, clone the repo 
 
 ~~~
-     git clone https://github.com/SWC-OSG-Workshop/2015-01-03-iupui.git
+     git clone https://github.com/SWC-OSG-Workshop/2015-03-03-iupui.git
 ~~~
 
 and create new branch named `gh-pages`.
@@ -93,5 +93,6 @@ Once finished editing the index.html, push content to the repository:
 ~~~
 
 As soon as the repo has been pushed to GitHub, GitHub will render the pages
-at the URL http://SWC-OSG-Workshop/2015-01-03-iupui 
+at the URL http://SWC-OSG-Workshop.github.io/2015-03-03-iupui
+
 
