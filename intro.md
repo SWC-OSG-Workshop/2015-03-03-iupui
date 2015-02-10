@@ -65,8 +65,12 @@ The [OSG Connect service](http://osgconnect.net) provides a login service to the
 
 #### OSG Acknowledgement
 
+
+
 The Open Science Grid is jointly funded by 
+
 * [Department of Energy](http://www.energy.gov/)
+
 * [National Science Foundation](http://www.nsf.gov/)
 
 
