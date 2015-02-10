@@ -10,6 +10,7 @@ title: Distributed Computing on Open Science Grid
 4.  [Submitting Jobs  - HTCondor](04-HTCondor-Submitting.html)
 5.  [Scaling Up Resources ](04a-ScalingUp.html)
 6.  [Data Storage and Transfer](05-Stash.html)
-7.  [Workflow Management - DAGMan](06-dagman.html)
-8.  [Troubleshooting](07-TroubleShooting.html)
+7.  [Workflow Management - DAGMan](06-dagman-namd.html)
+8.  [Workflow Management - Pegasus](06a-pegasus-namd.html)
+9.  [Troubleshooting](07-TroubleShooting.html)
 </div>
