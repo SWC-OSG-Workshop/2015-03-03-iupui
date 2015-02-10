@@ -179,11 +179,11 @@ outputs/   ###  Where the NAMD output files are stored at the end of each job.
  
 The path of the scratch, workflows and outputs directories are declared in the "submit" scripts at lines 19, 20, 25,26 and 47. 
  
-#Exercise -1#
+####Exercise -1####
 
 Under the directory "tutorial-pegasus-namd/Exercises/SingleEx1" you will see relevant files to run the single NAMD job with pegasus. However, you need to change few things to run submit the job. The errors are associated with the definition of names of dax-generator and NAMD input files. You have to correct these two file names in the submit submit.bash and in the dax-generator script.
 
-#Exercise-2#
+####Exercise-2####
 
 Under the directory "tutorial-pegasus-namd/Exercises/SingleEx2" you will see relevant files. In this exercise, you have to specify the correct path for the scratch, output and workflow directories.  All these information are included in the site-generator.bash and submit.bash
 
@@ -256,7 +256,7 @@ $ pegasus_status
 $ condor_q username   ###   username is your login ID
 ~~~
 
-#Excercise-3#
+####Excercise-3####
 
 Go to the directory  "tutorial-pegasus-namd/Exercises/NSeqEx3". All the input files related to run 1,000 sequential NAMD jobs are in the file "inputsN1000.tar.gz".  The input files were already generated to save time. Uncompress the files by running the command "tar -xvzf inputsN1000.tar.gz" that will create a directory "inputs" containing all the NAMD input files.  The dax-generator python script needs to know about these 1,000 input files, include this information in the dax-generator.
 
@@ -325,7 +325,7 @@ $ pegasus_status
 $ condor_q username   ###   username is your login ID
 ~~~
 
-#Excercise-4#
+####Excercise-4####
 Go to the directory  "tutorial-pegasus-namd/Exercises/MtimesNseqEx4". All the input files related to run 1000 sequential NAMD jobs are in the file "inputsM1000N50.tar.gz".  The input files were already generated to save time. Uncompress the files by running the command "tar -xvzf inputsM1000N50.tar.gz" that will create a directory "inputs" containing all the NAMD input files. The input files represent 1000-parallel, each of  50-sequential NAMD jobs. Include this information in the dax-generator.
 
 
