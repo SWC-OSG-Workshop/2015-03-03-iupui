@@ -333,7 +333,9 @@ Go to the directory  "tutorial-pegasus-namd/Exercises/MtimesNseqEx4". All the in
 
 #### Keypoints
 *Pegasus requires dax.xml, sites.xml and pegasusrc files. These files contain the information about executable, input and output files and the relation between them while executing the jobs.
+
 *It is convenient to generate the xml files via scripts. In our example, dax.xml is generated via python script and sites.xml is generated via bash script.
+
 *To implement a new workflow, edit the existing dax-generator, sites-generator and  submit scripts.  In the above examples, we modified the workflow for the single NAMD job to implement the workflows of N-sequential and M-parallel, N-sequential jobs.
  
 </div>
@@ -343,10 +345,14 @@ Go to the directory  "tutorial-pegasus-namd/Exercises/MtimesNseqEx4". All the in
 <div class="keypoints" markdown="1">
 
 #### References
-Pegasus Documentation Pegasus documentation page.
-OSG  QuickStart.   Getting started with the Open Science Grid (OSG).
-Condor Manual.    Manual for the high throughput condor (HTCondor)  software to schedules the jobs on OSG. 
-For further assistance or questions, please email connect-support@opensciencegrid.org.
+*Pegasus Documentation Pegasus documentation page.
+
+*OSG  QuickStart.   Getting started with the Open Science Grid (OSG).
+
+*Condor Manual.    Manual for the high throughput condor (HTCondor)  software to schedules the jobs on OSG. 
+
+
+*For further assistance or questions, please email connect-support@opensciencegrid.org.
 </div>
 
 
