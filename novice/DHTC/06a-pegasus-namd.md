@@ -210,7 +210,7 @@ Here, the NAMD jobs are executed one-by-one. In these sequential executions, the
    <img alt="pegasus-namd-Nseqjob" src="{{page.root}}/novice/DHTC/PegasusNAMDImages/N-seq.png" width="600">
 </div>
 
-**Figure 2.** The workflow to run linear sequence of jobs. The blue circles represent jobs and the arrows represent direction of data flow. This means data from J1 is required to start the job j2, the data from j2 is required to start the job j3 and so on. 
+**Figure 2.** The workflow to run linear sequence of jobs. The blue circles represent jobs and the arrows represent direction of data flow. This means data from J<sub>1</sub> is required to start the job j<sub>2</sub>, the data from j<sub>2</sub> is required to start the job j<sub>3</sub> and so on. 
 
 <h3> Generating N-sequential input  files </h3> 
 
