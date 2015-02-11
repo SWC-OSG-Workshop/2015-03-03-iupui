@@ -75,10 +75,14 @@ Whenever you make use of Open Science Grid resources, services or tools, we woul
 grateful to have you acknowledge OSG in your presentations and publications. 
 
 
-#####Acknowledgement section:##### For example, you can add in your acknowledgement section: "This research was done using resources provided by the Open Science Grid".
+#####Acknowledgement section:##### 
+
+For example, you can add in your acknowledgement section: "This research was done using resources provided by the Open Science Grid".
 
 
 #####Citations:#####
+
+We recommend the following references
 
 [Pordes2008] Pordes, R. et al. (2007). "The Open Science Grid", J. Phys. Conf. Ser. 78, 012057.doi:10.1088/1742-6596/78/1/012057.
  
