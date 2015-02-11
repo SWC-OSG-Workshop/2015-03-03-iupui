@@ -210,7 +210,7 @@ Here, the NAMD jobs are executed one-by-one. In these sequential executions, the
    <img alt="pegasus-namd-Nseqjob" src="{{page.root}}/novice/DHTC/PegasusNAMDImages/N-seq.png" width="600">
 </div>
 
-Figure. 2 The workflow to run linear sequence of jobs. The blue circles represent jobs and the arrows represent direction of data flow. This means data from J1 is required to start the job j2, the data from j2 is required to start the job j3 and so on. 
+**Figure 2.** The workflow to run linear sequence of jobs. The blue circles represent jobs and the arrows represent direction of data flow. This means data from J1 is required to start the job j2, the data from j2 is required to start the job j3 and so on. 
 
 <h3> Generating N-sequential input  files </h3> 
 
@@ -279,7 +279,7 @@ We consider the case of running large molecular dynamics simulations of a protei
    <img alt="pegasus-namd-Mpar-Nseqjob" src="{{page.root}}/novice/DHTC/PegasusNAMDImages/M-parN-seq.png" width="600">
 </div>
 
-**Figure. 3**  The NAMD simulation is performed for M 
+**Figure 3.**  The NAMD simulation is performed for M 
 temperatures - T<sub>1</sub>, T<sub>2</sub>, ....T<sub>M</sub>.  For each 
 temperature, there are N-sequential jobs. 
 
