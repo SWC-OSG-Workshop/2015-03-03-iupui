@@ -57,10 +57,13 @@ $ cd tutorial-pegasus-namd/Single  ###   First, we will focus on running single 
 ~~~
 
 <div>
-   <img alt="pegasus-namd-singlejob" src="{{page.root}}/novice/DHTC/PegasusNAMDImages/SingleJob.png" width="600" caption= Figure 1.  The actual workflow of executing single job is transformed into a set of jobs in pegasus workflow. Such a transformation is useful to keep track of input and output data. In particular, when we have to deal with lot of jobs.>
+   <img alt="pegasus-namd-singlejob" src="{{page.root}}/novice/DHTC/PegasusNAMDImages/SingleJob.png" width="600" >
 </div>
 
-Figure 1.  The actual workflow of executing single job is transformed into a set of jobs in pegasus workflow. Such a transformation is useful to keep track of input and output data. In particular, when we have to deal with lot of jobs.
+**Figure 1.**  The actual workflow of executing single job is transformed into a set of jobs in 
+pegasus workflow. Such a transformation is useful to keep track of input and output data. In 
+particular, when we have to deal with lot of jobs.
+
 Now we will take a closer look at the files to understand how to create the pegasus workflow for single job. 
 
 
@@ -273,10 +276,12 @@ We consider the case of running large molecular dynamics simulations of a protei
 
 
 <div>
-   <img alt="pegasus-namd-Nseqjob" src="{{page.root}}/novice/DHTC/PegasusNAMDImages/M-parN-seq.png" width="600">
+   <img alt="pegasus-namd-Mpar-Nseqjob" src="{{page.root}}/novice/DHTC/PegasusNAMDImages/M-parN-seq.png" width="600">
 </div>
 
-Figure. 3  The NAMD simulation is performed for M temperatures - T1, T2, ....TM.  For each temperature, there are N-sequential jobs. 
+**Figure. 3**  The NAMD simulation is performed for M 
+temperatures - T<sub>1</sub>, T<sub>2</sub>, ....T<sub>M</sub>.  For each 
+temperature, there are N-sequential jobs. 
 
 <h3> Generating M*N input files </h3> 
 
