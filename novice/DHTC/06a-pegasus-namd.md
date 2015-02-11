@@ -59,10 +59,11 @@ $ cd tutorial-pegasus-namd/Single  ###   First, we will focus on running single 
 <div>
    <img alt="pegasus-namd-singlejob" src="{{page.root}}/novice/DHTC/PegasusNAMDImages/SingleJob.png" width="600" >
 </div>
-
+<?php 
 **Figure 1.**  The actual workflow of executing single job is transformed into a set of jobs in 
 pegasus workflow. Such a transformation is useful to keep track of input and output data. In 
 particular, when we have to deal with lot of jobs.
+?>
 
 Now we will take a closer look at the files to understand how to create the pegasus workflow for single job. 
 
