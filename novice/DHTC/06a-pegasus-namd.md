@@ -23,19 +23,26 @@ example of running M parallel jobs where each parallel-job contains N sequential
 
 Pegasus enables scientists to construct workflows in abstract terms without worrying about the details of the underlying execution environment or the particulars of the low-level specifications required by the middleware. Some of the advantages of using Pegasus includes:
 
-Portability / Reuse - User created workflows can easily be run in different environments without alteration. Pegasus currently runs workflows on top of Condor, Grid infrastrucutures such as Open Science Grid and TeraGrid, Amazon EC2, Nimbus, and many campus clusters. The same workflow can run on a single system or across a heterogeneous set of resources.
+*   **Performance** - The Pegasus mapper can reorder, group, and prioritize tasks in order to increase the overall workflow performance.
 
-Performance - The Pegasus mapper can reorder, group, and prioritize tasks in order to increase the overall workflow performance.
+*   **Scalability** - Pegasus can easily scale both the size of the workflow, and the resources that the workflow 
+is distributed over. Pegasus runs workflows ranging from just a few computational tasks up to 1 
+million. The number of resources involved in executing a workflow can scale as needed without any 
+impediments to performance.
 
-Scalability - Pegasus can easily scale both the size of the workflow, and the resources that the workflow is distributed over. Pegasus runs workflows ranging from just a few computational tasks up to 1 million. The number of resources involved in executing a workflow can scale as needed without any impediments to performance.
+*   **Portability / Reuse** - User created workflows can easily be run in different environments without 
+alteration. Pegasus currently runs workflows on top of Condor, Grid infrastrucutures such as 
+Open Science Grid and TeraGrid, Amazon EC2, Nimbus, and many campus clusters. The same workflow 
+can run on a single system or across a heterogeneous set of resources.
 
-Provenance - By default, all jobs in Pegasus are launched via the kickstart process that captures runtime provenance of the job and helps in debugging. The provenance data is collected in a database, and the data can be summaries with tools such as pegasus-statistics, pegasus-plots, or directly with SQL queries.
+*   **Data Management** - Pegasus handles replica selection, data transfers and output registrations in data 
+catalogs. These tasks are added to a workflow as auxiliary jobs by the Pegasus planner.
 
-Data Management - Pegasus handles replica selection, data transfers and output registrations in data catalogs. These tasks are added to a workflow as auxiliary jobs by the Pegasus planner.
+*   **Reliability** - Jobs and data transfers are automatically retried in case of failures. Debugging tools such as pegasus-analyzer helps the user to debug the workflow in case of non-recoverable failures.
 
-Reliability - Jobs and data transfers are automatically retried in case of failures. Debugging tools such as pegasus-analyzer helps the user to debug the workflow in case of non-recoverable failures.
+*   **Provenance** - By default, all jobs in Pegasus are launched via the kickstart process that captures runtime provenance of the job and helps in debugging. The provenance data is collected in a database, and the data can be summaries with tools such as pegasus-statistics, pegasus-plots, or directly with SQL queries.
 
-Error Recovery - When errors occur, Pegasus tries to recover when possible by retrying tasks, by retrying the entire workflow, by providing workflow-level checkpointing, by re-mapping portions of the workflow, by trying alternative data sources for staging data, and, when all else fails, by providing a rescue workflow containing a description of only the work that remains to be done.
+*   **Error Recovery** - When errors occur, Pegasus tries to recover when possible by retrying tasks, by retrying the entire workflow, by providing workflow-level checkpointing, by re-mapping portions of the workflow, by trying alternative data sources for staging data, and, when all else fails, by providing a rescue workflow containing a description of only the work that remains to be done.
 
 
 
