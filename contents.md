@@ -21,6 +21,7 @@ title: Lessons
 
 ## Unit II: [Version Control with Git ](novice/git/index.html)
 (Bala)
+
 1.  [Introducing Version Control](novice/git/00-intro.html)
 2.  [A Better Kind of Backup](novice/git/01-backup.html)
 3.  [Collaborating](novice/git/02-collab.html)
@@ -30,6 +31,7 @@ title: Lessons
 
 ## Unit III: [Programming with Python ](novice/python/index.html)
 (David 1 and 2. Suchandra 3, 4, 5 and 6)
+
 1.  [Analyzing Patient Data](novice/python/01-numpy.html)
 2.  [Creating Functions](novice/python/02-func.html)
 3.  [Analyzing Multiple Data Sets](novice/python/03-loop.html)
@@ -39,7 +41,7 @@ title: Lessons
 7.  [Reference...](novice/ref/03-python.html)
 
 ## Unit IV: [Distributed Computing on Open Science Grid](novice/DHTC/index.html)
-(Emelie 1, 2 and 3. Mats 4, 8 and 9. Suchandra 6. Bala 7)  
+Emelie 1, 2 and 3. Mats 4, 8 and 9. Suchandra 6. Bala 7
 1.  [Introduction to Open Science Grid  (Emelie) ](novice/DHTC/01-IntroGrid.html)
 2.  [Getting access to OSG   (Emelie) ](novice/DHTC/02-ssh.html)
 3.  [Software Resources on OSG (Emelie) ](novice/DHTC/03-OSGtour.html)
