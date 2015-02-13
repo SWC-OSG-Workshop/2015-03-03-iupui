@@ -6,9 +6,10 @@ title: Lessons
 
 
 ## [Introduction](intro.html)
+(Bala)
 
 ## Unit I: [The Unix Shell ](novice/shell/index.html)
-(David)
+(David 1-8)
 
 1.  [Introducing the Shell](novice/shell/00-intro.html)
 2.  [Files and Directories](novice/shell/01-filedir.html)
@@ -20,7 +21,7 @@ title: Lessons
 8.  [Reference...](novice/ref/01-shell.html)
 
 ## Unit II: [Version Control with Git ](novice/git/index.html)
-(Bala)
+(Bala 1-6)
 
 1.  [Introducing Version Control](novice/git/00-intro.html)
 2.  [A Better Kind of Backup](novice/git/01-backup.html)
@@ -30,7 +31,7 @@ title: Lessons
 6.  [Reference...](novice/ref/02-git.html)
 
 ## Unit III: [Programming with Python ](novice/python/index.html)
-(David 1 and 2. Suchandra 3, 4, 5 and 6)
+(David 1 and 2. Suchandra 3-6)
 
 1.  [Analyzing Patient Data](novice/python/01-numpy.html)
 2.  [Creating Functions](novice/python/02-func.html)
@@ -41,7 +42,7 @@ title: Lessons
 7.  [Reference...](novice/ref/03-python.html)
 
 ## Unit IV: [Distributed Computing on Open Science Grid](novice/DHTC/index.html)
-(Emelie 1, 2 and 3. Mats 4, 8 and 9. Suchandra 6. Bala 7)
+(Emelie 1-3. Mats 4, 8 and 9. Suchandra 6. Bala 7)
 
 1.  [Introduction to Open Science Grid  (Emelie) ](novice/DHTC/01-IntroGrid.html)
 2.  [Getting access to OSG   (Emelie) ](novice/DHTC/02-ssh.html)
