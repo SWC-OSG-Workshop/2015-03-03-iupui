@@ -10,7 +10,7 @@ title: Lessons
 ## Unit I: [The Unix Shell ](novice/shell/index.html)
 (David)
 
-1.  [Introducing the Shell (David) ](novice/shell/00-intro.html)
+1.  [Introducing the Shell](novice/shell/00-intro.html)
 2.  [Files and Directories](novice/shell/01-filedir.html)
 3.  [Creating Things](novice/shell/02-create.html)
 4.  [Pipes and Filters](novice/shell/03-pipefilter.html)
