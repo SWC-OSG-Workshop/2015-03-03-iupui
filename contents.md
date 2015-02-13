@@ -7,7 +7,7 @@ title: Lessons
 
 ## [Introduction - Bala](intro.html)
 
-## Unit I: [The Unix Shell - David](novice/shell/index.html)
+## Unit I: [The Unix Shell  (David) ](novice/shell/index.html)
 1.  [Introducing the Shell](novice/shell/00-intro.html)
 2.  [Files and Directories](novice/shell/01-filedir.html)
 3.  [Creating Things](novice/shell/02-create.html)
@@ -17,7 +17,7 @@ title: Lessons
 7.  [Finding Things](novice/shell/06-find.html)
 8.  [Reference...](novice/ref/01-shell.html)
 
-## Unit II: [Version Control with Git - Bala](novice/git/index.html)
+## Unit II: [Version Control with Git  (Bala)](novice/git/index.html)
 1.  [Introducing Version Control](novice/git/00-intro.html)
 2.  [A Better Kind of Backup](novice/git/01-backup.html)
 3.  [Collaborating](novice/git/02-collab.html)
@@ -26,12 +26,12 @@ title: Lessons
 6.  [Reference...](novice/ref/02-git.html)
 
 ## Unit III: [Programming with Python - David and Suchandra](novice/python/index.html)
-1.  [Analyzing Patient Data - David](novice/python/01-numpy.html)
-2.  [Creating Functions - David](novice/python/02-func.html)
-3.  [Analyzing Multiple Data Sets - Suchandra](novice/python/03-loop.html)
-4.  [Making Choices - Suchandra](novice/python/04-cond.html)
-5.  [Defensive Programming - Suchandra](novice/python/05-defensive.html)
-6.  [Command-Line Programs - Suchandra](novice/python/06-cmdline.html)
+1.  [Analyzing Patient Data  (David) ](novice/python/01-numpy.html)
+2.  [Creating Functions  (David) ](novice/python/02-func.html)
+3.  [Analyzing Multiple Data Sets  (Suchandra) ](novice/python/03-loop.html)
+4.  [Making Choices  (Suchandra) ](novice/python/04-cond.html)
+5.  [Defensive Programming  (Suchandra) ](novice/python/05-defensive.html)
+6.  [Command-Line Programs  (Suchandra) ](novice/python/06-cmdline.html)
 7.  [Reference...](novice/ref/03-python.html)
 
 ## Unit IV: [Distributed Computing on Open Science Grid](novice/DHTC/index.html)
