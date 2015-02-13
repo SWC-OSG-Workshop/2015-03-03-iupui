@@ -5,9 +5,9 @@ title: Lessons
 ---
 
 
-## [Introduction](intro.html)
+## [Introduction - Bala](intro.html)
 
-## Unit I: [The Unix Shell](novice/shell/index.html)
+## Unit I: [The Unix Shell - David](novice/shell/index.html)
 1.  [Introducing the Shell](novice/shell/00-intro.html)
 2.  [Files and Directories](novice/shell/01-filedir.html)
 3.  [Creating Things](novice/shell/02-create.html)
@@ -17,7 +17,7 @@ title: Lessons
 7.  [Finding Things](novice/shell/06-find.html)
 8.  [Reference...](novice/ref/01-shell.html)
 
-## Unit II: [Version Control with Git](novice/git/index.html)
+## Unit II: [Version Control with Git - Bala](novice/git/index.html)
 1.  [Introducing Version Control](novice/git/00-intro.html)
 2.  [A Better Kind of Backup](novice/git/01-backup.html)
 3.  [Collaborating](novice/git/02-collab.html)
@@ -25,25 +25,25 @@ title: Lessons
 5.  [Open Science](novice/git/04-open.html)
 6.  [Reference...](novice/ref/02-git.html)
 
-## Unit III: [Programming with Python](novice/python/index.html)
-1.  [Analyzing Patient Data](novice/python/01-numpy.html)
-2.  [Creating Functions](novice/python/02-func.html)
-3.  [Analyzing Multiple Data Sets](novice/python/03-loop.html)
-4.  [Making Choices](novice/python/04-cond.html)
-5.  [Defensive Programming](novice/python/05-defensive.html)
-6.  [Command-Line Programs](novice/python/06-cmdline.html)
+## Unit III: [Programming with Python - David and Suchandra](novice/python/index.html)
+1.  [Analyzing Patient Data - David](novice/python/01-numpy.html)
+2.  [Creating Functions - David](novice/python/02-func.html)
+3.  [Analyzing Multiple Data Sets - Suchandra](novice/python/03-loop.html)
+4.  [Making Choices - Suchandra](novice/python/04-cond.html)
+5.  [Defensive Programming - Suchandra](novice/python/05-defensive.html)
+6.  [Command-Line Programs - Suchandra](novice/python/06-cmdline.html)
 7.  [Reference...](novice/ref/03-python.html)
 
 ## Unit IV: [Distributed Computing on Open Science Grid](novice/DHTC/index.html)
-1.  [Introduction to Open Science Grid](novice/DHTC/01-IntroGrid.html)
-2.  [Getting access to OSG ](novice/DHTC/02-ssh.html)
-3.  [Software Resources on OSG](novice/DHTC/03-OSGtour.html)
-4.  [Submitting Jobs  - HTCondor](novice/DHTC/04-HTCondor-Submitting.html)
-5.  [Scaling Up Resources ](novice/DHTC/04a-ScalingUp.html)
-6.  [Data Storage and Transfer](novice/DHTC/05-Stash.html)
-7.  [Workflow Management - DAGMan](novice/DHTC/06-dagman-namd.html)
-8.  [Workflow Management - Pegasus](novice/DHTC/06a-pegasus-namd.html)
-9.  [Troubleshooting](novice/DHTC/07-TroubleShooting.html)
+1.  [Introduction to Open Science Grid  (Emelie) ](novice/DHTC/01-IntroGrid.html)
+2.  [Getting access to OSG   (Emelie) ](novice/DHTC/02-ssh.html)
+3.  [Software Resources on OSG (Emelie) ](novice/DHTC/03-OSGtour.html)
+4.  [Submitting Jobs  - HTCondor (Mats) ](novice/DHTC/04-HTCondor-Submitting.html)
+5.  [Scaling Up Resources (Mats) ](novice/DHTC/04a-ScalingUp.html)
+6.  [Data Storage and Transfer (Suchandra) ](novice/DHTC/05-Stash.html)
+7.  [Workflow Management - DAGMan (Bala) ](novice/DHTC/06-dagman-namd.html)
+8.  [Workflow Management - Pegasus (Mats) ](novice/DHTC/06a-pegasus-namd.html)
+9.  [Troubleshooting (Mats) ](novice/DHTC/07-TroubleShooting.html)
 
 ## Further Materials
 
