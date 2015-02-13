@@ -41,7 +41,8 @@ title: Lessons
 7.  [Reference...](novice/ref/03-python.html)
 
 ## Unit IV: [Distributed Computing on Open Science Grid](novice/DHTC/index.html)
-Emelie 1, 2 and 3. Mats 4, 8 and 9. Suchandra 6. Bala 7
+(Emelie 1, 2 and 3. Mats 4, 8 and 9. Suchandra 6. Bala 7)
+
 1.  [Introduction to Open Science Grid  (Emelie) ](novice/DHTC/01-IntroGrid.html)
 2.  [Getting access to OSG   (Emelie) ](novice/DHTC/02-ssh.html)
 3.  [Software Resources on OSG (Emelie) ](novice/DHTC/03-OSGtour.html)
