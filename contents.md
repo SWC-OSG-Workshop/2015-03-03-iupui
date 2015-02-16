@@ -31,7 +31,7 @@ title: Lessons
 6.  [Reference...](novice/ref/02-git.html)
 
 ## Unit III: [Programming with Python ](novice/python/index.html)
-(David 1 and 2. Suchandra 3-6)
+(David 1-3. Suchandra 4-6)
 
 1.  [Analyzing Patient Data](novice/python/01-numpy.html)
 2.  [Creating Functions](novice/python/02-func.html)
