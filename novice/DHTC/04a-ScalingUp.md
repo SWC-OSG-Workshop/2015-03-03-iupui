@@ -1,22 +1,22 @@
 ---
 layout: lesson
 root: ../..
-title: Scaling up compute resources 
+title: Scaling up compute resources
 ---
 <div class="objectives" markdown="1">
 
 #### Objectives
 *   Learn why to scale up the computational resources.
-*   Learn how to scaling up the computational resources  
+*   Learn how to scaling up the computational resources
 </div>
 
 ## Overview
 
-Scaling up the computational resources is a big advantage for doing     
-certain large scale calculations on OSG. Consider the extensive         
-sampling for a multi-dimensional Monte Carlo integration or molecular   
-dynamics simulation with several initial conditions. These type of      
-calculations require submitting lot of jobs.                  
+Scaling up the computational resources is a big advantage for doing
+certain large scale calculations on OSG. Consider the extensive
+sampling for a multi-dimensional Monte Carlo integration or molecular
+dynamics simulation with several initial conditions. These type of
+calculations require submitting lot of jobs.
 
 In the previous example, we submitted the job to a single worker
 machine. About a million CPU hours per day are available to OSG users
@@ -36,7 +36,7 @@ $ tutorial quickstart
 $ cd quickstart
 ~~~
 
-As we discussed in the previous section on HTCondor scripts, we need to 
+As we discussed in the previous section on HTCondor scripts, we need to
 prepare the job execution and the job submission scripts. Here again
 is our job execution script:
 
@@ -54,7 +54,7 @@ verbose) submit file looks like -- `tutorial02.submit`:
 ~~~
 Universe = vanilla
 
-Executable = short.sh 
+Executable = short.sh
 
 Error = log/job.error.$(Cluster)-$(Process)     # differs from previous script
 Output = log/job.output.$(Cluster)-$(Process)   # differs from previous script
@@ -116,7 +116,7 @@ You see a number of graphs and plots here showing things happening
 in OSG Connect.  We'll go over these briefly, then return later.
 
 
-## Passing arguments to executables 
+## Passing arguments to executables
 
 Sometimes it's useful to pass arguments to your executable from your
 submit file. For example, you might want to use the same job script
@@ -131,14 +131,14 @@ also dial down our sleep time from 15 seconds to 5.
 Submission script:
 
 ~~~
-Universe = vanilla 
+Universe = vanilla
 
-Executable = short.sh 
-Arguments = 5 # to sleep 5 seconds 
+Executable = short.sh
+Arguments = 5 # to sleep 5 seconds
 
-Error = log/job.err.$(Cluster)-$(Process) 
-Output = log/job.out.$(Cluster)-$(Process) 
-Log = log/job.log.$(Cluster) 
+Error = log/job.err.$(Cluster)-$(Process)
+Output = log/job.out.$(Cluster)-$(Process)
+Log = log/job.log.$(Cluster)
 
 Queue 100
 ~~~
@@ -173,7 +173,7 @@ Let's submit:
 ~~~
 $ condor_submit tutorial03
 Submitting job(s)..........
-100 job(s) submitted to cluster 938. 
+100 job(s) submitted to cluster 938.
 ~~~
 
 This will take a little longer, of course, but we're still hardly doing
@@ -258,9 +258,9 @@ Running setup in ./tutorial-nelle-nemo...
 [654/0]$ ls -sF
 total 152
 4 do-stats.sh*       8 NENE01729A.txt  8 NENE01843A.txt  8 NENE02040A.txt
-4 goodiff            8 NENE01729B.txt  8 NENE01843B.txt  8 NENE02040B.txt  
+4 goodiff            8 NENE01729B.txt  8 NENE01843B.txt  8 NENE02040B.txt
 4 goo-multi.sh*      8 NENE01736A.txt  8 NENE01971Z.txt  8 NENE02040Z.txt
-4 goo-single.submit  8 NENE01751A.txt  8 NENE01978A.txt  8 NENE02043A.txt  
+4 goo-single.submit  8 NENE01751A.txt  8 NENE01978A.txt  8 NENE02043A.txt
 4 goostats*          8 NENE01751B.txt  8 NENE01978B.txt  8 NENE02043B.txt
 0 log/               8 NENE01812A.txt  4 NENE02018B.txt
 ~~~
@@ -441,7 +441,7 @@ save a great deal of time.
 
 #### Key Points
 *    Scaling up the computational resources on OSG is crucial to taking full advantage of grid computing.
-*    Changing the value of *Queue* allows the user to scale up the resources.   
+*    Changing the value of *Queue* allows the user to scale up the resources.
 *    *Arguments* allows you to pass parameters to a job script.
 *    $(Cluster) and $(Process) can be used to name log files uniquely.
 *    `connect histogram` gives a nice plot of resource assignments.

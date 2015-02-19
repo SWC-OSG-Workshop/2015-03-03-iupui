@@ -1,21 +1,21 @@
 ---
 layout: lesson
 root: ../..
-title: Job submission on OSG Connect  
+title: Job submission on OSG Connect
 ---
 <div class="objectives" markdown="1">
 
 #### Objectives
-*   Learn how to submit HTCondor jobs.   
-*   Learn how to monitor the running jobs.    
+*   Learn how to submit HTCondor jobs.
+*   Learn how to monitor the running jobs.
 </div>
 
-<h2>Overview</h2> In this section, we will learn the basics of HTCondor 
-in submitting and monitoring workloads, or "jobs". The jobs are         
-submitted through the login node of OSG Connect. The submitted jobs are 
-executed on the remote worker node(s) and the outputs are transfered    
-back to the login node. In the HTCondor job submit file, we have to     
-describe how to execute the program and transfer the output data.       
+<h2>Overview</h2> In this section, we will learn the basics of HTCondor
+in submitting and monitoring workloads, or "jobs". The jobs are
+submitted through the login node of OSG Connect. The submitted jobs are
+executed on the remote worker node(s) and the outputs are transfered
+back to the login node. In the HTCondor job submit file, we have to
+describe how to execute the program and transfer the output data.
 
 <h2>Login to OSG Connect </h2>
 
@@ -38,15 +38,15 @@ usage:
 $ connect
 usage: connect <subcommand> [args]
        connect addsite user@hostname sched-type
-       connect cclog 
-       connect debug 
+       connect cclog
+       connect debug
        connect histogram [-l | --last] [user]
-       connect project 
-       connect reset 
-       connect setup 
+       connect project
+       connect reset
+       connect setup
        connect show-projects [-u username] [projectname]
        connect status [-f | --full]
-       connect submit 
+       connect submit
        connect watch [seconds [user]]
 ~~~
 
@@ -77,7 +77,7 @@ saved, so whatever project you selected most recently is used for all future
 workloads, until you change it again.
 
 > #### A little more about projects ####
-> 
+>
 > Every user should start out with a reasonable project -- it's not
 > necessary to change your project to get started computing.  Once you're
 > ready to begin research on OSG, there are two routes: join an existing
@@ -100,10 +100,10 @@ example files for all today's lessons using `tutorial`.
 ~~~
 $ tutorial
 usage: tutorial list                 - show available tutorials
-       tutorial info <tutorial-name> - show details of a tutorial 
-       tutorial <tutorial-name>      - set up a tutorial 
+       tutorial info <tutorial-name> - show details of a tutorial
+       tutorial <tutorial-name>      - set up a tutorial
 
-Currently available tutorials: 
+Currently available tutorials:
 R ..................... Estimate Pi using the R programming language
 cp2k .................. How-to for the electronic structure package CP2K
 dagman-namd ........... Launch a series of NAMD simulations via Condor DAG
@@ -179,13 +179,13 @@ _it is extremely important for jobs running on the grid_.  So is the
 "shbang" line (`#!/bin/sh`).
 
 ~~~
-$ chmod +x short.sh 
+$ chmod +x short.sh
 ~~~
 
-Since we used the tutorial command, all files are already in your       
-workspace. Run the job locally when setting up a new job type -- it is  
-important to test your job outside of HTCondor before submitting into   
-the Open Science Grid.                                                  
+Since we used the tutorial command, all files are already in your
+workspace. Run the job locally when setting up a new job type -- it is
+important to test your job outside of HTCondor before submitting into
+the Open Science Grid.
 
 ~~~
 $ ./short.sh
@@ -217,24 +217,24 @@ $ nano tutorial01.submit
 ~~~
 
 ~~~
-# The UNIVERSE defines an execution environment. You will almost always use VANILLA. 
-Universe = vanilla 
+# The UNIVERSE defines an execution environment. You will almost always use VANILLA.
+Universe = vanilla
 
-# EXECUTABLE is the program your job will run It's often useful 
-# to create a shell script to "wrap" your actual work. 
-Executable = short.sh 
+# EXECUTABLE is the program your job will run It's often useful
+# to create a shell script to "wrap" your actual work.
+Executable = short.sh
 
 # ERROR and OUTPUT are the error and output channels from your job
 # that HTCondor returns from the remote host.
 Error = job.error
 Output = job.output
 
-# The LOG file is where HTCondor places information about your 
-# job's status, success, and resource consumption. 
+# The LOG file is where HTCondor places information about your
+# job's status, success, and resource consumption.
 Log = job.log
 
-# QUEUE is the "start button" - it launches any jobs that have been 
-# specified thus far. 
+# QUEUE is the "start button" - it launches any jobs that have been
+# specified thus far.
 Queue 1
 ~~~
 
@@ -244,7 +244,7 @@ Submit the job using `condor_submit`.
 
 ~~~
 $ condor_submit tutorial01.submit
-Submitting job(s). 
+Submitting job(s).
 1 job(s) submitted to cluster 823.
 ~~~
 
@@ -307,7 +307,7 @@ job has probably already completed by now, so submit a new one first:
 
 ~~~
 $ condor_submit tutorial01.submit
-Submitting job(s). 
+Submitting job(s).
 1 job(s) submitted to cluster 823
 $ connect watch
 ~~~
@@ -349,7 +349,7 @@ Job running as user: uid=58704(osg) gid=58704(osg) groups=58704(osg)
 Job is running in directory: /var/lib/condor/execute/dir_2120
 Sleeping for 10 seconds...
 Et voila!
-~~~ 
+~~~
 
 ## Unscheduling jobs ##
 
@@ -360,7 +360,7 @@ is `condor_rm`, and it takes only one argument: the job cluster or job ID.
 
 ~~~
 $ condor_submit tutorial01.submit
-Submitting job(s). 
+Submitting job(s).
 1 job(s) submitted to cluster 829
 $ condor_rm 829
 Cluster 829 has been marked for removal.
@@ -370,7 +370,7 @@ Or alternately:
 
 ~~~
 $ condor_submit tutorial01.submit
-Submitting job(s). 
+Submitting job(s).
 1 job(s) submitted to cluster 829
 $ condor_rm 829.0
 Job 829.0 has been marked for removal.
@@ -379,11 +379,11 @@ Job 829.0 has been marked for removal.
 <div class="keypoints" markdown="1">
 
 #### Key Points
-*   HTCondor shedules and monitors your Jobs. 
-*   To submit a job to HTCondor, you must prepare the job execution and job submission scripts. 
-*   *condor_submit* - HTCondor's job submission command.     
-*   *condor_q* - HTCondor's job monitoring command.     
-*   *condor_rm* - HTCondor's job removal command.     
+*   HTCondor shedules and monitors your Jobs.
+*   To submit a job to HTCondor, you must prepare the job execution and job submission scripts.
+*   *condor_submit* - HTCondor's job submission command.
+*   *condor_q* - HTCondor's job monitoring command.
+*   *condor_rm* - HTCondor's job removal command.
 </div>
 
 ## Challenges
