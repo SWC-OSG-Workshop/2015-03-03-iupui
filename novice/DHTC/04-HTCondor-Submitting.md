@@ -57,12 +57,12 @@ during this workshop.  Fow now, just take a look at two:
 $ connect show-projects
 Based on your username (username), here is a list of projects you have
 access to:
-  * SWC-OSG-UC14
+  * SWC-OSG-IU15
 ~~~
 
 Each time you run a workload on OSG Connect, you need a project name to
 associate it.  For your research work later on, we can get you started
-with a permanent project, but for now you should find the SWC-OSG-UC14
+with a permanent project, but for now you should find the SWC-OSG-IU15
 project available.  Some of you might also find the ConnectTrain project
 listed -- that is OK but not necessary.
 
@@ -343,12 +343,14 @@ Read the output file. It should be something like this:
 
 ~~~
 $ cat job.output
-Start time: Wed Aug 21 09:46:38 CDT 2013
-Job is running on node: appcloud01
-Job running as user: uid=58704(osg) gid=58704(osg) groups=58704(osg)
-Job is running in directory: /var/lib/condor/execute/dir_2120
-Sleeping for 10 seconds...
-Et voila!
+19 Feb 15:11:43| connect_wrapper  | 
+Start time: Thu Feb 19 15:11:43 EST 2015
+Job is running on node: VPA-WH505-01-S4-its-u12-nfs-20141003
+Job running as user: uid=1066(osgconnect) gid=502(condoruser) groups=502(condoruser),108(fuse)
+Job is running in directory: /tmp/rcc_syracuse/rcc.9jiqjUmxeB/execute.10.5.30.6-1128/dir_1380
+
+Working hard...
+Science complete!
 ~~~
 
 ## Unscheduling jobs ##
