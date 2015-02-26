@@ -673,8 +673,8 @@ minimum inflammation per day
 <div class="challenges">
 <h4 id="challenges">Challenges</h4>
 <ol style="list-style-type: decimal">
-<li><p>Why do all of our plots stop just short of the upper end of our graph? Why are the vertical lines in our plot of the minimum inflammation per day not vertical?</p></li>
-<li><p>Create a plot showing the standard deviation of the inflammation data for each day across all patients.</p></li>
+<li><p>Why do all of our plots stop just short of the upper end of our graph? </p></li>
+<li><p>Create a plot showing the standard deviation of the inflammation data for each day across all patients. (Hint: the function standard deviation function is std() )</p></li>
 </ol>
 </div>
 
@@ -725,7 +725,7 @@ plt.show()</pre>
 <div class="challenges">
 <h4 id="challenges">Challenges</h4>
 <ol style="list-style-type: decimal">
-<li>Modify the program to display the three plots on top of one another instead of side by side.</li>
+<li>Modify the program to display the three plots on top of one another instead of side by side. (Hint subplot(col, row, index starts from 1)</li>
 </ol>
 </div>
 
