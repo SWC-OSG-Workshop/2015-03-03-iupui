@@ -272,21 +272,6 @@ print &#39;weight in kilograms is now:&#39;, weight_kg, &#39;and weight in pound
 </div>
 
 
-<div class="challenges">
-<h4 id="challenges">Challenges</h4>
-<ol style="list-style-type: decimal">
-<li><p>Draw diagrams showing what variables refer to what values after each statement in the following program:</p>
-<pre class="sourceCode python"><code class="sourceCode python">mass = <span class="fl">47.5</span>
-age = <span class="dv">122</span>
-mass = mass * <span class="fl">2.0</span>
-age = age - <span class="dv">20</span></code></pre></li>
-<li><p>What does the following program print out?</p>
-<pre class="sourceCode python"><code class="sourceCode python">first, second = <span class="st">&#39;Grace&#39;</span>, <span class="st">&#39;Hopper&#39;</span>
-third, fourth = second, first
-<span class="dt">print</span> third, fourth</code></pre></li>
-</ol>
-</div>
-
 ### Manipulating Data
 
 
