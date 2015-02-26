@@ -725,7 +725,7 @@ plt.show()</pre>
 <div class="challenges">
 <h4 id="challenges">Challenges</h4>
 <ol style="list-style-type: decimal">
-<li>Modify the program to display the three plots on top of one another instead of side by side. (Hint subplot(col, row, index starts from 1)</li>
+<li>Modify the program to display the three plots on top of one another instead of side by side. (Hint: subplot(col, row, index starts from 1) )</li>
 </ol>
 </div>
 
