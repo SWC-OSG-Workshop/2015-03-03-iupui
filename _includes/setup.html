@@ -4,246 +4,32 @@
 -->
 
 <p>
-  To participate in a Software Carpentry workshop, 
-  you will need working copies of the software described below.
-  Please make sure to install everything
-  (or at least to download the installers)
-  <em>before</em> the start of your workshop. 
-</p>
-
-<p style="border: 1px solid #ccc; padding: 0.5em">
-    <i>If you do not have an account on the Open Science Grid,
+  We will do all the exercises on the Open Science Grid. <i>If you do not have an account on the Open Science Grid,
     <a href="http://osgconnect.net/signup">please sign up</a></i>, either
     in advance of the course or first thing in the morning. It takes 5-10
     minutes to complete the sign up process and about 30 minutes to get
     your account activated.  
+
+  Please make sure that you have the secured shell available on your laptop. 
+  <em>before</em> the start of your workshop. 
 </p>
-
-<h3>Overview</h3>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h4>Editor</h4>
-    <p>
-      Make sure you install, or have available, a text editor that
-      you are comfortable with using.
-      Since we will be using a remote shell for writing batch
-      jobs, we encourage using an editor such as <code>nano</code>,
-      <code>emacs</code> or <code>vi</code>.
-    </p>
-    <h4>The Bash Shell</h4>
-    <p>
-      Bash is a commonly-used shell. Using a shell gives you
-      more power to do more tasks more quickly with your
-      computer.
-    </p>
-    <h4>Git</h4>
-    <p>
-      Git is a state-of-the-art version control system. It
-      lets you track who made changes to what when and has
-      options for easily updating a shared or public version of
-      your code on <a href="https://github.com/">github.com</a>.
-    </p>
-  </div>
-  <div class="span6">
-    <h4>Python</h4>
-    <p>
-      Python is becoming very popular in scientific computing,
-      and it's a great language for teaching general programming concepts due to its easy-to-read syntax.
-      We teach with Python version 2.7,
-      since it is still the most widely used.
-      Installing all the scientific packages for Python individually can be a bit difficult,
-      so we recommend an all-in-one installer.
-    </p>
-
-    <h4>Secure Shell & Secure Copy </h4>
+    <h3>Secure Shell & Secure Copy </h3>
     <p>
       <code>ssh</code> (secure shell) is an encrypted remote login tool. It lets you connect to remote resources, such as the OSG Connect login node and interact with the machine via UNIX shell.
       Similarly, <code>scp</code> (secure copy) is a tool that facilitates encrypted file transfer. We will use both to interact with OSG Connect.
     </p>
-
+<h3 style="margin-top: 2em;">Setup for Mac OS X and Linux </h3>
+    <p>
+     Most of them come with built in installation of ssh and scp, if not, install them. 
+    </p>
+<h3 style="margin-top: 2em;"> Windows </h3>
+    <p>
+     Install <a href="http://www.putty.org/ "> PuTTY </a> which is a free implementation of SSH for Windows. 
   </div>
 </div>
 
-<h3 style="margin-top: 2em;">Setup for Windows</h3>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h4>Editor</h4>
-    <p>
-      <code>nano</code> is the editor installed by the Software Carpentry Installer,
-      it is a basic editor integrated into the lesson material.
-    </p>
-    <h4>Git Bash</h4>
-    <p>
-      Install Git for Windows by download and running
-      <a href="http://msysgit.github.io/">the installer</a>.
-      This will provide you with both Git and Bash in the Git Bash program.
-    </p>
-    <h4>Software Carpentry Installer</h4>
-    <p>This installer requires an active internet connection</p>
-    <p>After installing Python and Git Bash:</p>
-    <ul>
-      <li>
-        Download the <a href="http://files.software-carpentry.org/SWCarpentryInstaller.exe">installer</a>.
-      </li>
-      <li>
-        If the file opens directly in the browser select <strong>File&rarr;Save Page As</strong>
-        to download it to your computer.
-      </li>
-      <li>
-        Double click on the file to run it.
-      </li>
-    </ul>
-  </div>
-  <div class="span6">
-    <h4>Python</h4>
-    <ul>
-      <li>
-        Download and install  <a href="http://continuum.io/downloads">Anaconda</a>.
-      </li>
-      <li>
-        Use all of the defaults for installation
-        <em>except</em>
-        make sure to check <strong>Make Anaconda the default Python</strong>.
-      </li>
-    </ul>
   </div>
 </div>
-
-<h3 style="margin-top: 2em;">Setup for Mac OS X</h3>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h4>Editor</h4>
-    <p>
-      If you are unfamiliar with UNIX text editors we recommend <code>nano</code>, which should be preinstalled.
-    </p>
-    <h4>Bash</h4>
-    <p>
-      The default shell in all versions of Mac OS X is bash,
-      so no need to install anything.  You access bash from
-      the Terminal (found
-      in <code>/Applications/Utilities</code>).  You may want
-      to keep Terminal in your dock for this workshop.
-    </p>
-    <h4>Git</h4>
-    <p>
-      Install Git for Mac by downloading and running
-      <a href="http://git-scm.com/downloads">the installer</a>.  For older
-      versions of OS X (10.5-10.7) use the most recent available
-      installer <a href="https://code.google.com/p/git-osx-installer/downloads/list">available
-      here</a>. Use the Leopard installer for 10.5 and the Snow Leopard
-      installer for 10.6-10.7.
-    </p>
-  </div>
-  <div class="span6">
-    <h4>Python</h4>
-    <ul>
-      <li>
-        Download and install <a href="http://continuum.io/downloads">Anaconda</a>.
-      </li>
-      <li>
-        Use all of the defaults for installation
-        <em>except</em>
-        make sure to check <strong>Make Anaconda the default Python</strong>.
-      </li>
-    </ul>
-
-    <h4>Secure Shell </h4>
-    <p>
-      ssh, scp  
-    </p>
-
-
-  </div>
-</div>
-
-<h3 style="margin-top: 2em;">Setup for Linux</h3>
-<div class="row-fluid">
-  <div class="span6">
-    <h4>Editor</h4>
-    <p>
-      Editors such as <code>nano</code> and <code>vim</code>
-      are usually preinstalled. If you are unfamiliar with these, choose <code>nano</code>.
-    </p>
-    <h4>Bash</h4>
-    <p>
-      The default shell is usually <code>bash</code>,
-      but if your machine is set up differently
-      you can run it by opening a terminal and typing <code>bash</code>.
-      There is no need to install anything.
-    </p>
-    <h4>Git</h4>
-    <p>
-      If Git is not already available on your machine you can try
-      to install it via your distro's package manager
-      (e.g. <code>apt-get</code> or <code>yum</code>).
-    </p>
-    <h4>Secure Shell </h4>
-    <p>
-      ssh, scp, rsync  
-    </p>
-
-  </div>
-  <div class="span6">
-    <h4>Python</h4>
-    <p>
-      We recommend the all-in-one scientific Python installer
-      <a href="http://continuum.io/downloads.html">Anaconda</a>.
-      (Installation requires using the shell and if you aren't
-      comfortable doing the installation yourself just
-      download the installer and we'll help you at the workshop.)
-    </p>
-    <ol>
-      <li>
-        Download the installer that matches your operating
-        system and save it in your home folder.
-      </li>
-      <li>
-        Open a terminal window.
-      </li>
-      <li>
-        Type <pre>bash Anaconda-</pre> and then press
-        tab. The name of the file you just downloaded should
-        appear.
-      </li>
-      <li>
-        Press enter. You will follow the text-only
-        prompts. When there is a colon at the bottom of the
-        screen press the down arrow to move down through the
-        text. Type <code>yes</code> and press enter to approve
-        the license. Press enter to approve the default
-        location for the files. Type <code>yes</code> and
-        press enter to prepend Anaconda to
-        your <code>PATH</code> (this makes the Anaconda
-        distribution the default Python).
-      </li>
-    </ol>
-  </div>
-</div>
-
-<h3 style="margin-top: 2em;">Setup using a virtual machine</h3>
-<p>
-  As an alternative, you can use a virtual machine (VM)
-  rather than installing all the software above. To use a VM:
-</p>
-<ol>
-  <li>
-    Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
-  </li>
-  <li>
-    Download our <a href="https://docs.google.com/uc?id=0B4Kr6DYkzkQtd05FekRId05DLXM&amp;export=download">VM image</a>.
-    <strong>Warning:</strong>
-    this file is 2.4 GByte,
-    so please download it <em>before</em> coming to your workshop.
-  </li>
-  <li>
-    Load the VM into VirtualBox by selecting "Import Appliance"
-    and loading the <code>.ova</code> file.
-  </li>
-</ol>
-
 
 <h2 style="margin-top: 2em;">Check your setup</h2>
 
@@ -258,36 +44,4 @@ activation may take about 30 minutes. </li>
      <li> type in your username and password as prompted </li>
      <li> if everthing is fine you will land on your home directory </li>
 </ul> 
-
-<p>
-  To check that you have the correct version of Python:
-</p>
-
-<ul>
-  <li>
-    Download <a href="./setup/swc-installation-test-1.py">swc-installation-test-1.py</a>
-  </li>
-  <li>Open up a bash shell</li>
-  <li>Change into the directory where you put the script</li>
-  <li>Run the script:
-    <pre>python swc-installation-test-1.py</pre>
-  </li>
-</ul>
-
-<p>
-  To check that you have the necessary software and tools:
-</p>
-
-<ul>
-  <li>
-    Download <a href="./setup/swc-installation-test-2.py">swc-installation-test-2.py</a>
-  </li>
-  <li>Open up a bash shell</li>
-  <li>Change into the directory where you put the script</li>
-  <li>Run the script:
-    <pre>python swc-installation-test-2.py</pre>
-  </li>
-</ul>
-
-<hr/>
 
