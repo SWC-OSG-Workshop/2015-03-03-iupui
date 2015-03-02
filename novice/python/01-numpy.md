@@ -3,7 +3,7 @@ layout: lesson
 root: ../..
 ---
 
-## Analyzing Patient Data
+## Analyzing Data with NumPy
 
 
 <div class="">
@@ -21,6 +21,7 @@ We are studying inflammation in patients who have been given a new treatment for
 The master copy of the data for this study is in a git repository. You can browse that repository here: <a href="https://github.com/SWC-OSG-Workshop/ExampleData">https://github.com/SWC-OSG-Workshop/ExampleData</a>.  Let's take a look.  Inside the <code>Python</code> folder are several CSV files.  We'll use them in the upcoming examples.
 
 N.B. You can also get a copy of this data in your OSG Connect account by <i>cloning</i> it from github:
+
 <code> 
 $ git clone https://github.com/SWC-OSG-Workshop/ExampleData.git
 </code> 
@@ -42,14 +43,14 @@ IPython Notebook is a useful tool for interactive data exploration and visualiza
 
 Once your IPython Notebook application opens, you'll see a list of folders:
 <ul>
-<li>data</li>
-<li>ExampleData</li>
-<li>IPython-Examples</li>
-<li>SWC-Python</li>
-<li>users</li>
+<li><code>data</code></li>
+<li><code>ExampleData</code></li>
+<li><code>IPython-Examples</code></li>
+<li><code>SWC-Python</code></li>
+<li><code>users</code></li>
 </ul>
 
-<code>ExampleData</code> is a copy of the ExampleData repository mentioned previously.  Click on ExampleData, then on Python to "move into" this folder.  You won't see the <code>.csv</code> files because they're not Notebook files, but they are present.
+<code>ExampleData</code> is a copy of the ExampleData repository mentioned previously.  Click on <code>ExampleData</code>, then on <code>Python</code> to "move into" this folder.  You won't see the <code>.csv</code> files because they're not Notebook files, but they are present.
 
 Now open a new notebook by clicking on <b>New Notebook</b> in the upper right corner of your IPython Notebook screen.
 
@@ -68,6 +69,7 @@ We'll try this pattern now with a few trivial commands. After each command, pres
 <li><code>slope</code></li>
 </ul>
 
+<hr/>
 
 <div class="objectives">
 <h4 id="objectives">Objectives</h4>
@@ -88,7 +90,7 @@ We'll try this pattern now with a few trivial commands. After each command, pres
 
 The essence of practical programming &mdash; as with mathematics &mdash; is learning to use fundamental tools and techniques to accomplish more complex tasks, without feeling overwhelmed by the magnitude of the greater task.
 
-A lot of powerful tools are built into the core of languages like Python, but as with a volume of mathematical proofs, even more power resides in the <a href="../../gloss.html#library">libraries</a> that developers build.  Different tasks that these libraries <i>implement</i> can be combined sequentially or conditionally to produce programs that do a lot of work, but with relatively simple rules.
+Many of powerful tools are built into the core of languages like Python, but as with a volume of mathematical proofs, even more power resides in the <a href="../../gloss.html#library">libraries</a> that developers build.  Different tasks that these libraries <i>implement</i> can be combined sequentially or conditionally to produce programs that do a lot of work, but with relatively simple rules.
 
 In Python, a library is <i>loaded</i> using the <a href="../../gloss.html#import">import</a> statement.  Let's do a simple demonstration by looking for the files in the current folder.  (Recall from the section on shell programming that <code>.</code> represents the current directory.)  Type the following:
 
@@ -147,7 +149,7 @@ If you want to suppress the output, insert ";" at the end of the statement.
 <pre>numpy.loadtxt(fname=&#39;inflammation-01.csv&#39;, delimiter=&#39;,&#39;);</pre>
 </div>
 
-Run the cell to see the output disappear. Now you can save the note book using the keyboard by typing "s". 
+IPython Notebook continuously saves your work, but you can ask it to save at any time by typing Command-S (Mac) or Control-S (Windows).
 
 </div>
 
