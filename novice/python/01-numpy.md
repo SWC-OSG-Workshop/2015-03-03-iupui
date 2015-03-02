@@ -285,7 +285,7 @@ print &#39;weight in kilograms is now:&#39;, weight_kg, &#39;and weight in pound
 </div>
 
 <p>
-Even though we initially defined <code>weight_lb</code> in terms of <code>weight_kg</code>, that relation does not persist, and <code>weight_lb</code> doesn't change when we redefine <code>weight_kg</code> The conversion of weight_kg to weight_lb happens <i>at the moment</i> that it's assigned, and never again after. The assignment itself is binding.  This may feel unnatural, especially if you're used to working with spreadsheets.  In a spreadsheet the only way to define one cell in terms of another is through a <i>function</i>.  Python has functions too, but they don't look quite the same as assignments.  We'll go over these later.
+Even though we initially defined <code>weight_lb</code> in terms of <code>weight_kg</code>, that relation does not persist, and <code>weight_lb</code> doesn't change when we redefine <code>weight_kg</code>. The conversion of weight_kg to weight_lb happens <i>at the moment</i> that it's assigned, and never again after. The assignment itself is binding.  This may feel unnatural, especially if you're used to working with spreadsheets.  In a spreadsheet the only way to define one cell in terms of another is through a <i>function</i>.  Python has functions too, but they don't look quite the same as assignments.  We'll go over these later.
 </p>
 
 <p>Now that we know how to assign things to variables, let's re-run <code>numpy.loadtxt</code> and save its result:</p>
@@ -381,7 +381,8 @@ Even though we initially defined <code>weight_lb</code> in terms of <code>weight
 
 
 <div class="">
-<p>The expression <code>data[30, 20]</code> may not surprise you, but <code>data[0, 0]</code> might. Programming languages like Fortran and MATLAB start counting at 1, because that's what human beings have done for thousands of years. Languages in the C family (including C++, Java, Perl, and Python) count from 0 because that's simpler for computers to do. As a result, if we have an M×N array in Python, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. It takes a bit of getting used to, but one way to remember the rule is that the index is how many steps we have to take from the start to get the item we want.</p>
+<p>The expression <code>data[30, 20]</code> may not surprise you, but <code>data[0, 0]</code> might. Programming languages like Fortran and MATLAB start counting at 1, because that's what humans are most accustomed to. Languages in the C family (including C++, Java, Perl, and Python) count from 0 because it's simpler for computers to do, which in turn makes it easier for programmers to sequence multiple steps that deal with the same arrays. (There's a lot less adding or subtracting 1 overall.) As a result, if we have an M×N array in Python, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. It takes a bit of getting used to, but one way to remember the rule is that the index is how many steps we have to take from the start to get the item we want.</p>
+
 <blockquote>
 <h4>In the Corner</h4>
 <p>What may also surprise you is that when Python displays an array, it shows the element with index <code>[0, 0]</code> in the upper left corner rather than the lower left. This is consistent with the way mathematicians draw matrices, but different from the Cartesian coordinates. The indices are (row, column) instead of (column, row) for the same reason.</p>
@@ -389,8 +390,35 @@ Even though we initially defined <code>weight_lb</code> in terms of <code>weight
 </div>
 
 
+#### Ranges
+
+Python has a standard <i>range notation</i> used to denote <i>slices</i> or <i>subsets</i> of a set. Any array in Python can be sliced using range notation.  As an example, suppose we have a set of children's ages:
+
+<div class="in">
+<pre>
+ages = [2, 3, 6, 9, 11, 13, 17]
+</pre>
+</div>
+
+<p>
+Range notation causes <code>ages[1:3]</code> to refer to elements 1, 2, and 3 of the list, or <code>[3, 6, 9]</code>.  The <code>1</code> is the index of the start of the range, and the <code>3</code> &mdash; counterintuitively &mdash;is the index of the item <i>after</i> the last item in the subset.  So elements N through M of a set named "sequence" would be indicated as <code>sequence[<b>N</b>:<b>M+1</b>]</code>.  It is also possible to leave out the <b>N</b> or <b>M</b> values.
+</p>
+
+<p>
+Since character strings are a kind of array, this is most easily demonstrated using strings:
+</p>
+<ul>
+<li><code>soup = "french onion"</code></li>
+<li><code>print soup[4:9]</code></li>
+<li><code>print soup[:6]</code></li>
+<li><code>print soup[7:]</code></li>
+</ul>
+
+
+#### NumPy's N-Dimensional Ranges
+
 <div class="">
-<p>An index like <code>[30, 20]</code> selects a single element of an array, but we can select whole sections as well. For example, we can select the first ten days (columns) of values for the first four (rows) patients like this:</p>
+<p>An index like <code>[30, 20]</code> selects a single element of an array, but we can select whole sections as well, using an extended form of range notation. For example, we can select the first ten days (columns) of values for the first four (rows) patients like this:</p>
 </div>
 
 
