@@ -7,62 +7,66 @@ root: ../..
 
 
 <div class="">
-<p>We are studying inflammation in patients who have been given a new treatment for arthritis, and need to analyze the first dozen data sets. The data sets are stored in <a href="../../gloss.html#csv">comma-separated values</a> (CSV) format: each row holds information for a single patient, and the columns represent successive days. The first few rows of our first file look like this:</p>
+
+We are studying inflammation in patients who have been given a new treatment for arthritis, and need to analyze the first dozen data sets. The data sets are stored in <a href="../../gloss.html#csv">comma-separated values</a> (CSV) format.  Each row holds data for a single patient.  The columns represent arthritis inflammations per day on successive days. The first few rows of our first file look like this:
+
+<div class="in">
 <pre><code>0,0,1,3,1,2,4,7,8,3,3,3,10,5,7,4,7,7,12,18,6,13,11,11,7,7,4,6,8,8,4,4,5,7,3,4,2,3,0,0
 0,1,2,1,2,1,3,2,2,6,10,11,5,9,4,4,7,16,8,6,18,4,12,5,12,7,11,5,11,3,3,5,4,4,5,5,1,1,0,1
 0,1,1,3,3,2,6,2,5,9,5,7,4,5,4,15,5,11,9,10,19,14,12,17,7,12,11,7,4,2,10,5,4,2,2,3,2,2,1,1
 0,0,2,0,4,2,2,1,6,7,10,7,9,13,8,8,15,10,10,7,17,4,4,7,6,15,6,4,9,11,3,5,6,3,3,4,2,3,2,1
 0,1,1,3,3,1,3,5,2,4,4,7,6,5,3,10,8,10,6,17,9,14,9,7,13,9,12,6,7,7,9,6,3,2,2,4,2,0,1,1</code></pre>
-<p>
-First we get the input data from the github repo. 
-</p>
+</div>
+
+The master copy of the data for this study is in a git repository. You can browse that repository here: <a href="https://github.com/SWC-OSG-Workshop/ExampleData">https://github.com/SWC-OSG-Workshop/ExampleData</a>.  Let's take a look.  Inside the <code>Python</code> folder are several CSV files.  We'll use them in the upcoming examples.
+
+N.B. You can also get a copy of this data in your OSG Connect account by <i>cloning</i> it from github:
 <code> 
 $ git clone https://github.com/SWC-OSG-Workshop/ExampleData.git
 </code> 
 
-<p>
-Let us take a look what is in the repo.
-</p>
-<code> 
-$ cd ExampleData 
-</code> 
-
-<p>
-We would like to work on the data located in the "Python" directory. 
-</p>
-<code> 
-$ cd Python
-</code> 
-<p>
-We see several csv files. We will use these files in the following examples. 
-</p>
-
 </div>
-
 
 <div class="">
 <p>We want to:</p>
 <ul>
-<li>load that data into memory,</li>
+<li>load the CSV data into memory,</li>
 <li>calculate the average inflammation per day across all patients, and</li>
 <li>plot the result.</li>
 </ul>
-<p>To do all that, we'll have to learn a little bit about programming.</p>
+<p>To do all that, we'll learn a little bit about programming in Python.</p>
 </div>
 
-Let us open the ipython notebook
-<code> 
-ipython notebook   
-</code>
 
-<p>
-or 
-</p>
+IPython Notebook is a useful tool for interactive data exploration and visualization.  An IPython server runs the code, and you interact with it through a web browser.  OSG Connect hosts an IPython server for training here: <a href="https://ipython.osgconnect.net/">https://ipython.osgconnect.net</a>.  Let's go there now.  (You will need to log in.)
 
-<code> 
-ipython notebook --notebook-dir "name of the directory"  
-</code>
+Once your IPython Notebook application opens, you'll see a list of folders:
+<ul>
+<li>data</li>
+<li>ExampleData</li>
+<li>IPython-Examples</li>
+<li>SWC-Python</li>
+<li>users</li>
+</ul>
 
+<code>ExampleData</code> is a copy of the ExampleData repository mentioned previously.  Click on ExampleData, then on Python to "move into" this folder.  You won't see the <code>.csv</code> files because they're not Notebook files, but they are present.
+
+Now open a new notebook by clicking on <b>New Notebook</b> in the upper right corner of your IPython Notebook screen.
+
+IPython Notebook follows a command/response pattern that may be familiar to you. In each box marked "In", you will enter Python code.  You can enter multiple lines of code in Notebook.  When you are done, press <b>SHIFT+ENTER</b> to execute the code you entered. If any output is produced, or if the code you entered returns a value, it will be shown in a box marked "Out".
+
+We'll try this pattern now with a few trivial commands. After each command, press SHIFT+ENTER.
+
+<ul>
+<li><code>print "hello"</code></li>
+<li><code>3+5</code></li>
+<li><code>max(9, 4, 21, 12)</code></li>
+<li><code>sum(9, 4, 21, 12)</code></li>
+<li><code>x1, y1 = 1, 1</code></li>
+<li><code>x2, y2 = 9, 4</code></li>
+<li><code>slope = (y2 - y1) / (x2 - x1)</code></li>
+<li><code>slope</code></li>
+</ul>
 
 
 <div class="objectives">
@@ -78,14 +82,32 @@ ipython notebook --notebook-dir "name of the directory"
 </ul>
 </div>
 
-### Loading Data
-
+### Libraries
 
 <div class="">
-<p>Words are useful, but what's more useful are the sentences and stories we use them to build. Similarly, while a lot of powerful tools are built into languages like Python, even more lives in the <a href="../../gloss.html#library">libraries</a> they are used to build.</p>
-<p>In order to load our inflammation data, we need to <a href="../../gloss.html#import">import</a> a library called NumPy that knows how to operate on matrices:</p>
+
+The essence of practical programming &mdash; as with mathematics &mdash; is learning to use fundamental tools and techniques to accomplish more complex tasks, without feeling overwhelmed by the magnitude of the greater task.
+
+A lot of powerful tools are built into the core of languages like Python, but as with a volume of mathematical proofs, even more power resides in the <a href="../../gloss.html#library">libraries</a> that developers build.  Different tasks that these libraries <i>implement</i> can be combined sequentially or conditionally to produce programs that do a lot of work, but with relatively simple rules.
+
+In Python, a library is <i>loaded</i> using the <a href="../../gloss.html#import">import</a> statement.  Let's do a simple demonstration by looking for the files in the current folder.  (Recall from the section on shell programming that <code>.</code> represents the current directory.)  Type the following:
+
+<div class="in">
+<pre>
+import os
+os.listdir('.')
+</pre>
 </div>
 
+<i>os</i> is a library that implements some useful procedures for interacting with the operating system.  <i>listdir</i> is a function, residing in the <i>os</i> library (or "module") which finds all the files in a directory.  It returns these as a list that you can assign to a variable, or just display on the screen.
+
+</div>
+
+### Loading Data
+
+<div class="">
+
+In order to load our inflammation data, we need to import a library called NumPy that knows how to operate on matrices:
 
 <div class="in">
 <pre>import numpy</pre>
@@ -93,7 +115,7 @@ ipython notebook --notebook-dir "name of the directory"
 
 
 <div class="">
-<p>Importing a library is like getting a piece of lab equipment out of a storage locker and setting it up on the bench. Once it's done, we can ask the library to read our data file for us:</p>
+<p>Importing a library is like getting a piece of lab equipment out of a storage locker and setting it up on the bench. NumPy in particular knows how to read and interpret CSV files, so we can ask it to load our data directly from a file:</p>
 </div>
 
 
@@ -112,21 +134,20 @@ ipython notebook --notebook-dir "name of the directory"
 </div>
 
 <div class="">
-<p>The expression <code>numpy.loadtxt(...)</code> is a <a href="../../gloss.html#function-call">function call</a> that asks Python to run the function <code>loadtxt</code> that belongs to the <code>numpy</code> library. This <a href="../../gloss.html#dotted-notation">dotted notation</a> is used everywhere in Python to refer to the parts of things as <code>whole.part</code>.</p>
-<p><code>numpy.loadtxt</code> has two <a href="../../gloss.html#parameter">parameters</a>: the name of the file we want to read, and the <a href="../../gloss.html#delimiter">delimiter</a> that separates values on a line. These both need to be character strings (or <a href="../../gloss.html#string">strings</a> for short), so we put them in quotes.</p>
-<p>When we are finished typing and press Shift+Enter, the notebook runs our command. Since we haven't told it to do anything else with the function's output, the notebook displays it. In this case, that output is the data we just loaded. By default, only a few rows and columns are shown (with <code>...</code> displayed to mark missing data). To save space, Python displays numbers as <code>1.</code> instead of <code>1.0</code> when there's nothing interesting after the decimal point.</p>
 
+The expression <code>numpy.loadtxt(...)</code> is a <a href="../../gloss.html#function-call">function call</a> that asks Python to run the function <code>loadtxt</code> that belongs to the <code>numpy</code> library. This <a href="../../gloss.html#dotted-notation">dotted notation</a> is used everywhere in Python to refer to the parts of things as <code>whole.part</code>.
 
-<p>
+<code>numpy.loadtxt</code> has two <a href="../../gloss.html#parameter">parameters</a>: the name of the file we want to read, and the <a href="../../gloss.html#delimiter">delimiter</a> that separates values on a line. These both need to be character strings (or <a href="../../gloss.html#string">strings</a> for short), so we put them in quotes.
+
+When we are finished typing and press Shift+Enter, the notebook runs our command. Since we haven't told it to do anything else with the function's output, the notebook displays it. In this case, that output is the data we just loaded. By default, only a few rows and columns are shown (with <code>...</code> displayed to mark missing data). To save space, Python displays numbers as <code>1.</code> instead of <code>1.0</code> when there's nothing interesting after the decimal point.
+
 If you want to suppress the output, insert ";" at the end of the statement. 
-</p>
 
 <div class="in">
 <pre>numpy.loadtxt(fname=&#39;inflammation-01.csv&#39;, delimiter=&#39;,&#39;);</pre>
 </div>
-<p>
+
 Run the cell to see the output disappear. Now you can save the note book using the keyboard by typing "s". 
-</p>
 
 </div>
 
