@@ -254,7 +254,7 @@ Assigning a value to one variable does <em>not</em> change the values of other v
 </p>
 
 <p>
-For example, let's store the subject's weight in pounds in a variable:
+For example, let's now store the subject's weight in pounds in a variable:
 </p>
 
 
@@ -269,13 +269,8 @@ print &#39;weight in kilograms:&#39;, weight_kg, &#39;and in pounds:&#39;, weigh
 </div>
 
 
-<div>
-<p><img src="img/python-sticky-note-variables-02.svg" alt="Creating Another Variable" /></p>
-</div>
-
-
 <div class="">
-<p>and then change <code>weight_kg</code>:</p>
+<p>Now let's change <code>weight_kg</code>.</p>
 </div>
 
 
@@ -289,14 +284,10 @@ print &#39;weight in kilograms is now:&#39;, weight_kg, &#39;and weight in pound
 </pre>
 </div>
 
+<p>
+Even though we initially defined <code>weight_lb</code> in terms of <code>weight_kg</code>, that relation does not persist, and <code>weight_lb</code> doesn't change when we redefine <code>weight_kg</code> The conversion of weight_kg to weight_lb happens <i>at the moment</i> that it's assigned, and never again after. The assignment itself is binding.  This may feel unnatural, especially if you're used to working with spreadsheets.  In a spreadsheet the only way to define one cell in terms of another is through a <i>function</i>.  Python has functions too, but they don't look quite the same as assignments.  We'll go over these later.
+</p>
 
-<div>
-<p><img src="img/python-sticky-note-variables-03.svg" alt="Updating a Variable" /></p>
-</div>
-
-
-<div class="">
-<p>Since <code>weight_lb</code> doesn't &quot;remember&quot; where its value came from, it isn't automatically updated when <code>weight_kg</code> changes. This is different from the way spreadsheets work.</p>
 <p>Now that we know how to assign things to variables, let's re-run <code>numpy.loadtxt</code> and save its result:</p>
 </div>
 
@@ -307,7 +298,7 @@ print &#39;weight in kilograms is now:&#39;, weight_kg, &#39;and weight in pound
 
 
 <div class="">
-<p>This statement doesn't produce any output because assignment doesn't display anything. If we want to check that our data has been loaded, we can print the variable's value:</p>
+<p>This statement doesn't produce any output because assignment doesn't <i>return</i> anything &mdash; the value previously returned and displayed is now bound up in the variable <code>data</code>.. If we want to check that our data has been loaded, we can print the variable's value:</p>
 </div>
 
 
@@ -328,7 +319,6 @@ print &#39;weight in kilograms is now:&#39;, weight_kg, &#39;and weight in pound
 
 
 ### Manipulating Data
-
 
 <div class="">
 <p>Now that our data is in memory, we can start doing things with it. First, let's ask what <a href="../../gloss.html#data-type">type</a> of thing <code>data</code> refers to:</p>
