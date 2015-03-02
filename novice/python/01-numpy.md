@@ -8,7 +8,9 @@ root: ../..
 
 <div class="">
 
+<p>
 We are studying inflammation in patients who have been given a new treatment for arthritis, and need to analyze the first dozen data sets. The data sets are stored in <a href="../../gloss.html#csv">comma-separated values</a> (CSV) format.  Each row holds data for a single patient.  The columns represent arthritis inflammations per day on successive days. The first few rows of our first file look like this:
+</p>
 
 <div class="in">
 <pre><code>0,0,1,3,1,2,4,7,8,3,3,3,10,5,7,4,7,7,12,18,6,13,11,11,7,7,4,6,8,8,4,4,5,7,3,4,2,3,0,0
@@ -18,13 +20,17 @@ We are studying inflammation in patients who have been given a new treatment for
 0,1,1,3,3,1,3,5,2,4,4,7,6,5,3,10,8,10,6,17,9,14,9,7,13,9,12,6,7,7,9,6,3,2,2,4,2,0,1,1</code></pre>
 </div>
 
+<p>
 The master copy of the data for this study is in a git repository. You can browse that repository here: <a href="https://github.com/SWC-OSG-Workshop/ExampleData">https://github.com/SWC-OSG-Workshop/ExampleData</a>.  Let's take a look.  Inside the <code>Python</code> folder are several CSV files.  We'll use them in the upcoming examples.
+</p>
 
+<p>
 N.B. You can also get a copy of this data in your OSG Connect account by <i>cloning</i> it from github:
+</p>
 
-<code> 
+<pre> 
 $ git clone https://github.com/SWC-OSG-Workshop/ExampleData.git
-</code> 
+</pre> 
 
 </div>
 
@@ -38,9 +44,11 @@ $ git clone https://github.com/SWC-OSG-Workshop/ExampleData.git
 <p>To do all that, we'll learn a little bit about programming in Python.</p>
 </div>
 
-
+<p>
 IPython Notebook is a useful tool for interactive data exploration and visualization.  An IPython server runs the code, and you interact with it through a web browser.  OSG Connect hosts an IPython server for training here: <a href="https://ipython.osgconnect.net/">https://ipython.osgconnect.net</a>.  Let's go there now.  (You will need to log in.)
+</p>
 
+<p>
 Once your IPython Notebook application opens, you'll see a list of folders:
 <ul>
 <li><code>data</code></li>
@@ -49,14 +57,23 @@ Once your IPython Notebook application opens, you'll see a list of folders:
 <li><code>SWC-Python</code></li>
 <li><code>users</code></li>
 </ul>
+</p>
 
+<p>
 <code>ExampleData</code> is a copy of the ExampleData repository mentioned previously.  Click on <code>ExampleData</code>, then on <code>Python</code> to "move into" this folder.  You won't see the <code>.csv</code> files because they're not Notebook files, but they are present.
+</p>
 
+<p>
 Now open a new notebook by clicking on <b>New Notebook</b> in the upper right corner of your IPython Notebook screen.
+</p>
 
+<p>
 IPython Notebook follows a command/response pattern that may be familiar to you. In each box marked "In", you will enter Python code.  You can enter multiple lines of code in Notebook.  When you are done, press <b>SHIFT+ENTER</b> to execute the code you entered. If any output is produced, or if the code you entered returns a value, it will be shown in a box marked "Out".
+</p>
 
+<p>
 We'll try this pattern now with a few trivial commands. After each command, press SHIFT+ENTER.
+</p>
 
 <ul>
 <li><code>print "hello"</code></li>
@@ -88,11 +105,17 @@ We'll try this pattern now with a few trivial commands. After each command, pres
 
 <div class="">
 
+<p>
 The essence of practical programming &mdash; as with mathematics &mdash; is learning to use fundamental tools and techniques to accomplish more complex tasks, without feeling overwhelmed by the magnitude of the greater task.
+</p>
 
+<p>
 Many of powerful tools are built into the core of languages like Python, but as with a volume of mathematical proofs, even more power resides in the <a href="../../gloss.html#library">libraries</a> that developers build.  Different tasks that these libraries <i>implement</i> can be combined sequentially or conditionally to produce programs that do a lot of work, but with relatively simple rules.
+</p>
 
+<p>
 In Python, a library is <i>loaded</i> using the <a href="../../gloss.html#import">import</a> statement.  Let's do a simple demonstration by looking for the files in the current folder.  (Recall from the section on shell programming that <code>.</code> represents the current directory.)  Type the following:
+</p>
 
 <div class="in">
 <pre>
@@ -101,7 +124,9 @@ os.listdir('.')
 </pre>
 </div>
 
+<p>
 <i>os</i> is a library that implements some useful procedures for interacting with the operating system.  <i>listdir</i> is a function, residing in the <i>os</i> library (or "module") which finds all the files in a directory.  It returns these as a list that you can assign to a variable, or just display on the screen.
+</p>
 
 </div>
 
@@ -109,7 +134,9 @@ os.listdir('.')
 
 <div class="">
 
-In order to load our inflammation data, we need to import a library called NumPy that knows how to operate on matrices:
+<p>
+In order to work with our inflammation data, we will import a library called NumPy that knows how to operate on matrices:
+</p>
 
 <div class="in">
 <pre>import numpy</pre>
@@ -137,19 +164,29 @@ In order to load our inflammation data, we need to import a library called NumPy
 
 <div class="">
 
+<p>
 The expression <code>numpy.loadtxt(...)</code> is a <a href="../../gloss.html#function-call">function call</a> that asks Python to run the function <code>loadtxt</code> that belongs to the <code>numpy</code> library. This <a href="../../gloss.html#dotted-notation">dotted notation</a> is used everywhere in Python to refer to the parts of things as <code>whole.part</code>.
+</p>
 
+<p>
 <code>numpy.loadtxt</code> has two <a href="../../gloss.html#parameter">parameters</a>: the name of the file we want to read, and the <a href="../../gloss.html#delimiter">delimiter</a> that separates values on a line. These both need to be character strings (or <a href="../../gloss.html#string">strings</a> for short), so we put them in quotes.
+</p>
 
+<p>
 When we are finished typing and press Shift+Enter, the notebook runs our command. Since we haven't told it to do anything else with the function's output, the notebook displays it. In this case, that output is the data we just loaded. By default, only a few rows and columns are shown (with <code>...</code> displayed to mark missing data). To save space, Python displays numbers as <code>1.</code> instead of <code>1.0</code> when there's nothing interesting after the decimal point.
+</p>
 
+<p>
 If you want to suppress the output, insert ";" at the end of the statement. 
+</p>
 
 <div class="in">
 <pre>numpy.loadtxt(fname=&#39;inflammation-01.csv&#39;, delimiter=&#39;,&#39;);</pre>
 </div>
 
+<p>
 IPython Notebook continuously saves your work, but you can ask it to save at any time by typing Command-S (Mac) or Control-S (Windows).
+</p>
 
 </div>
 
@@ -174,8 +211,7 @@ IPython Notebook continuously saves your work, but you can ask it to save at any
 </div>
 
 <div class="out">
-<pre>55
-</pre>
+<pre>55</pre>
 </div>
 
 
@@ -189,8 +225,7 @@ IPython Notebook continuously saves your work, but you can ask it to save at any
 </div>
 
 <div class="out">
-<pre>weight in pounds: 121.0
-</pre>
+<pre>weight in pounds: 121.0</pre>
 </div>
 
 
@@ -212,18 +247,15 @@ print &#39;weight in kilograms is now:&#39;, weight_kg</pre>
 
 <div class="">
 <p>As the example above shows, we can print several things at once by separating them with commas.</p>
-<p>If we imagine the variable as a sticky note with a name written on it, assignment is like putting the sticky note on a particular value:</p>
 </div>
 
+<p>In Python, as in most other common programming languages, <i>assignment</i> refers to the linking of a <i>name</i> (also called a variable, symbol, or label) to a <i>value</i>.  It's a simple one-way relation.
+Assigning a value to one variable does <em>not</em> change the values of other variables.
+</p>
 
-<div class="">
-<p><img src="img/python-sticky-note-variables-01.svg" alt="Variables as Sticky Notes" /></p>
-</div>
-
-
-<div class="">
-<p>This means that assigning a value to one variable does <em>not</em> change the values of other variables. For example, let's store the subject's weight in pounds in a variable:</p>
-</div>
+<p>
+For example, let's store the subject's weight in pounds in a variable:
+</p>
 
 
 <div class="in">
