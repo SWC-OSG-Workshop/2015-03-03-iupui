@@ -33,7 +33,7 @@ title: Lessons
 ## Unit III: [Programming with Python ](novice/python/index.html)
 (David 1-3. Suchandra 4-6)
 
-1.  [Analyzing Patient Data](novice/python/01-numpy.html)
+1.  [Analyzing Data with NumPy](novice/python/01-numpy.html)
 2.  [Creating Functions](novice/python/02-func.html)
 3.  [Analyzing Multiple Data Sets](novice/python/03-loop.html)
 4.  [Making Choices](novice/python/04-cond.html)
