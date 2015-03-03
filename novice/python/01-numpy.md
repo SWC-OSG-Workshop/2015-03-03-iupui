@@ -392,7 +392,9 @@ Even though we initially defined <code>weight_lb</code> in terms of <code>weight
 
 #### Ranges
 
-Python has a standard <i>range notation</i> used to denote <i>slices</i> or <i>subsets</i> of a set. Any array in Python can be sliced using range notation.  As an example, suppose we have a set of children's ages:
+Python has a standard <i>range notation</i> used to denote
+<a href="../../gloss.html#slice"><i>slices</i></a>
+or <i>subsets</i> of a set. Any array in Python can be sliced using range notation.  As an example, suppose we have a set of children's ages:
 
 <div class="in">
 <pre>
@@ -499,7 +501,7 @@ print small</pre>
 
 
 <div class="">
-<p>Arrays also know how to perform common mathematical operations on their values. If we want to find the average inflammation for all patients on all days, for example, we can just ask the array for its mean value</p>
+<p>Arrays also know how to perform common mathematical operations on their values. If we want to find the average inflammation for all patients on all days, for example, we can just ask the array for its mean value.</p>
 </div>
 
 
@@ -561,6 +563,10 @@ print &#39;maximum inflammation for patient 0:&#39;, patient_0.max()</pre>
 <div class="out">
 <pre>maximum inflammation for patient 2: 19.0
 </pre>
+</div>
+
+<div class="">
+<p>Note that this is effectively the same mechanism as shell pipelines. You can call methods on top of methods so long as those methods return valid Python objects, without needing to assign these intermediary objects to variables.</p>
 </div>
 
 
@@ -638,7 +644,7 @@ print &#39;maximum inflammation for patient 0:&#39;, patient_0.max()</pre>
 
 <div class="challenges">
 <h4 id="challenges">Challenges</h4>
-<p>A subsection of an array is called a <a href="../../gloss.html#slice">slice</a>. We can take slices of character strings as well:</p>
+<p>As we previously saw, we can take slices of a character string. For example:</p>
 </div>
 
 
