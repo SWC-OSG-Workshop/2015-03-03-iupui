@@ -409,12 +409,15 @@ Range notation causes <code>ages[1:3]</code> to refer to elements 1, 2, and 3 of
 <p>
 Since character strings are a kind of array, this is most easily demonstrated using strings:
 </p>
-<ul>
-<li><code>soup = "french onion"</code></li>
-<li><code>print soup[4:9]</code></li>
-<li><code>print soup[:6]</code></li>
-<li><code>print soup[7:]</code></li>
-</ul>
+
+<div class="in">
+<pre>
+soup = "french onion"
+print soup[4:9]
+print soup[:6]
+print soup[7:]
+</pre>
+</div>
 
 
 #### NumPy's N-Dimensional Ranges
