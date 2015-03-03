@@ -75,16 +75,19 @@ IPython Notebook follows a command/response pattern that may be familiar to you.
 We'll try this pattern now with a few trivial commands. After each command, press SHIFT+ENTER.
 </p>
 
-<ul>
-<li><code>print "hello"</code></li>
-<li><code>3+5</code></li>
-<li><code>max(9, 4, 21, 12)</code></li>
-<li><code>sum(9, 4, 21, 12)</code></li>
-<li><code>x1, y1 = 1, 1</code></li>
-<li><code>x2, y2 = 9, 4</code></li>
-<li><code>slope = (y2 - y1) / (x2 - x1)</code></li>
-<li><code>slope</code></li>
-</ul>
+
+<div class="in">
+<pre>
+print "hello"
+3+5
+max(9, 4, 21, 12)
+sum(9, 4, 21, 12)
+x1, y1 = 1, 1
+x2, y2 = 9, 4
+slope = (y2 - y1) / (x2 - x1)
+slope
+</pre>
+</div>
 
 <hr/>
 
