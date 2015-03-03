@@ -1,7 +1,7 @@
 ---
 layout: lesson
 root: ../..
-title: Open Science
+title: Hosting
 ---
 <div class="objectives" markdown="1">
 
