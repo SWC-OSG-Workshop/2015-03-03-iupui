@@ -27,7 +27,7 @@ title: Lessons
 2.  [A Better Kind of Backup](novice/git/01-backup.html)
 3.  [Collaborating](novice/git/02-collab.html)
 4.  [Conflicts](novice/git/03-conflict.html)
-5.  [Open Science](novice/git/04-open.html)
+5.  [Hosting Science](novice/git/04-open.html)
 6.  [Reference...](novice/ref/02-git.html)
 
 ## Unit III: [Programming with Python ](novice/python/index.html)
