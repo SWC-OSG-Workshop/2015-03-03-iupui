@@ -27,12 +27,12 @@ root: ../..
 
 
 <div class="">
-<p>Let's start by defining a function <code>fahr_to_kelvin</code> that converts temperatures from Fahrenheit to Kelvin:</p>
+<p>Let's start by defining a function <code>f_to_k</code> that converts temperatures from Fahrenheit to Kelvin:</p>
 </div>
 
 
 <div class="in">
-<pre>def fahr_to_kelvin(temp):
+<pre>def f_to_k(temp):
     return ((temp - 32) * (5/9)) + 273.15</pre>
 </div>
 
@@ -45,8 +45,8 @@ root: ../..
 
 
 <div class="in">
-<pre>print &#39;freezing point of water:&#39;, fahr_to_kelvin(32)
-print &#39;boiling point of water:&#39;, fahr_to_kelvin(212)</pre>
+<pre>print &#39;freezing point of water:&#39;, f_to_k(32)
+print &#39;boiling point of water:&#39;, f_to_k(212)</pre>
 </div>
 
 <div class="out">
@@ -64,7 +64,7 @@ boiling point of water: 273.15
 
 
 <div>
-<p><em>Debugging</em> is when we fix a piece of code that we know is working incorrectly. In this case, we know that <code>fahr_to_kelvin</code> is giving us the wrong answer, so let's find out why.</p>
+<p><em>Debugging</em> is when we fix a piece of code that we know is working incorrectly. In this case, we know that <code>f_to_k</code> is giving us the wrong answer, so let's find out why.</p>
 <p>For big pieces of code, there are tools called <em>debuggers</em> that aid in this process.</p>
 <p>We just have a short function, so we'll debug by choosing some parameter value, breaking our function into small parts, and printing out the value of each part.</p>
 </div>
@@ -141,16 +141,16 @@ print &#34;212 - 32:&#34;, 212 - 32</pre>
 
 
 <div>
-<p>Let's fix our <code>fahr_to_kelvin</code> function with this new knowledge.</p>
+<p>Let's fix our <code>f_to_k</code> function with this new knowledge.</p>
 </div>
 
 
 <div class="in">
-<pre>def fahr_to_kelvin(temp):
+<pre>def f_to_k(temp):
     return ((temp - 32) * (5.0/9.0)) + 273.15
 
-print &#39;freezing point of water:&#39;, fahr_to_kelvin(32)
-print &#39;boiling point of water:&#39;, fahr_to_kelvin(212)</pre>
+print &#39;freezing point of water:&#39;, f_to_k(32)
+print &#39;boiling point of water:&#39;, f_to_k(212)</pre>
 </div>
 
 <div class="out">
@@ -173,10 +173,10 @@ boiling point of water: 373.15
 
 
 <div class="in">
-<pre>def kelvin_to_celsius(temp):
+<pre>def k_to_c(temp):
     return temp - 273.15
 
-print &#39;absolute zero in Celsius:&#39;, kelvin_to_celsius(0.0)</pre>
+print &#39;absolute zero in Celsius:&#39;, k_to_c(0.0)</pre>
 </div>
 
 <div class="out">
@@ -191,12 +191,12 @@ print &#39;absolute zero in Celsius:&#39;, kelvin_to_celsius(0.0)</pre>
 
 
 <div class="in">
-<pre>def fahr_to_celsius(temp):
-    temp_k = fahr_to_kelvin(temp)
-    result = kelvin_to_celsius(temp_k)
+<pre>def f_to_c(temp):
+    temp_k = f_to_k(temp)
+    result = k_to_c(temp_k)
     return result
 
-print &#39;freezing point of water in Celsius:&#39;, fahr_to_celsius(32.0)</pre>
+print &#39;freezing point of water in Celsius:&#39;, f_to_c(32.0)</pre>
 </div>
 
 <div class="out">
@@ -226,13 +226,13 @@ hm</code></pre></li>
 
 
 <div class="">
-<p>Let's take a closer look at what happens when we call <code>fahr_to_celsius(32.0)</code>. To make things clearer, we'll start by putting the initial value 32.0 in a variable and store the final result in one as well:</p>
+<p>Let's take a closer look at what happens when we call <code>f_to_c(32.0)</code>. To make things clearer, we'll start by putting the initial value 32.0 in a variable and store the final result in one as well:</p>
 </div>
 
 
 <div class="in">
 <pre>original = 32.0
-final = fahr_to_celsius(original)</pre>
+final = f_to_c(original)</pre>
 </div>
 
 
@@ -247,7 +247,7 @@ final = fahr_to_celsius(original)</pre>
 
 
 <div class="">
-<p>When we call <code>fahr_to_celsius</code>, Python <em>doesn't</em> create the variable <code>temp</code> right away. Instead, it creates something called a <a href="../../gloss.html#stack-frame">stack frame</a> to keep track of the variables defined by <code>fahr_to_kelvin</code>. Initially, this stack frame only holds the value of <code>temp</code>:</p>
+<p>When we call <code>f_to_c</code>, Python <em>doesn't</em> create the variable <code>temp</code> right away. Instead, it creates something called a <a href="../../gloss.html#stack-frame">stack frame</a> to keep track of the variables defined by <code>f_to_k</code>. Initially, this stack frame only holds the value of <code>temp</code>:</p>
 </div>
 
 
@@ -257,7 +257,7 @@ final = fahr_to_celsius(original)</pre>
 
 
 <div class="">
-<p>When we call <code>fahr_to_kelvin</code> inside <code>fahr_to_celsius</code>, Python creates another stack frame to hold <code>fahr_to_kelvin</code>'s variables:</p>
+<p>When we call <code>f_to_k</code> inside <code>f_to_c</code>, Python creates another stack frame to hold <code>f_to_k</code>'s variables:</p>
 </div>
 
 
@@ -267,8 +267,8 @@ final = fahr_to_celsius(original)</pre>
 
 
 <div class="">
-<p>It does this because there are now two variables in play called <code>temp</code>: the parameter to <code>fahr_to_celsius</code>, and the parameter to <code>fahr_to_kelvin</code>. Having two variables with the same name in the same part of the program would be ambiguous, so Python (and every other modern programming language) creates a new stack frame for each function call to keep that function's variables separate from those defined by other functions.</p>
-<p>When the call to <code>fahr_to_kelvin</code> returns a value, Python throws away <code>fahr_to_kelvin</code>'s stack frame and creates a new variable in the stack frame for <code>fahr_to_celsius</code> to hold the temperature in Kelvin:</p>
+<p>It does this because there are now two variables in play called <code>temp</code>: the parameter to <code>f_to_c</code>, and the parameter to <code>f_to_k</code>. Having two variables with the same name in the same part of the program would be ambiguous, so Python (and every other modern programming language) creates a new stack frame for each function call to keep that function's variables separate from those defined by other functions.</p>
+<p>When the call to <code>f_to_k</code> returns a value, Python throws away <code>f_to_k</code>'s stack frame and creates a new variable in the stack frame for <code>f_to_c</code> to hold the temperature in Kelvin:</p>
 </div>
 
 
@@ -278,7 +278,7 @@ final = fahr_to_celsius(original)</pre>
 
 
 <div class="">
-<p>It then calls <code>kelvin_to_celsius</code>, which means it creates a stack frame to hold that function's variables:</p>
+<p>It then calls <code>k_to_c</code>, which means it creates a stack frame to hold that function's variables:</p>
 </div>
 
 
@@ -288,7 +288,7 @@ final = fahr_to_celsius(original)</pre>
 
 
 <div class="">
-<p>Once again, Python throws away that stack frame when <code>kelvin_to_celsius</code> is done and creates the variable <code>result</code> in the stack frame for <code>fahr_to_celsius</code>:</p>
+<p>Once again, Python throws away that stack frame when <code>k_to_c</code> is done and creates the variable <code>result</code> in the stack frame for <code>f_to_c</code>:</p>
 </div>
 
 
@@ -298,7 +298,7 @@ final = fahr_to_celsius(original)</pre>
 
 
 <div class="">
-<p>Finally, when <code>fahr_to_celsius</code> is done, Python throws away <em>its</em> stack frame and puts its result in a new variable called <code>final</code> that lives in the stack frame we started with:</p>
+<p>Finally, when <code>f_to_c</code> is done, Python throws away <em>its</em> stack frame and puts its result in a new variable called <code>final</code> that lives in the stack frame we started with:</p>
 </div>
 
 
