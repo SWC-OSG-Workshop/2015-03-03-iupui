@@ -406,7 +406,7 @@ ages = [2, 3, 6, 9, 11, 13, 17]
 </div>
 
 <p>
-Range notation causes <code>ages[1:3]</code> to refer to elements 1, 2, and 3 of the list, or <code>[3, 6, 9]</code>.  The <code>1</code> is the index of the start of the range, and the <code>3</code> &mdash; counterintuitively &mdash;is the index of the item <i>after</i> the last item in the subset.  So elements N through M of a set named "sequence" would be indicated as <code>sequence[<b>N</b>:<b>M+1</b>]</code>.  It is also possible to leave out the <b>N</b> or <b>M</b> values.
+Range notation causes <code>ages[1:4]</code> to refer to elements 1, 2, and 3 of the list &mdash; the slice starting at index 1 and extending to (but not including) index 4 &mdash; or <code>[3, 6, 9]</code>.  The <code>1</code> is the index of the start of the range, and the <code>3</code> &mdash; counterintuitively &mdash;is the index of the item <i>after</i> the last item in the subset.  So elements N through M of a set named "sequence" would be indicated as <code>sequence[<b>N</b>:<b>M+1</b>]</code>.  It is also possible to leave out the <b>N</b> or <b>M</b> values.
 </p>
 
 <p>
