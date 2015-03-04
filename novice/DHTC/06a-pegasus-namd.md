@@ -168,7 +168,7 @@ To submit the job
 
 ~~~
 ###   To submit the job
-$ ./submit
+$ ./submit.bash
 ~~~
 
 To check the status of the submitted job
@@ -259,7 +259,7 @@ As mentioned before, we can submit and check the status of the job as follows
 
 ~~~
 ###   To submit the job
-$ ./submit
+$ ./submit.bash
 ###   To check the status
 $ pegasus_status
 ###  or you can also check with the condor_q command
@@ -330,7 +330,7 @@ line 9 ./dax-generator-namdEq-MtimesNSeq.py ###   The dax-generator script is ex
 
 ~~~
 ###   To submit the job
-$ ./submit
+$ ./submit.bash
 ###   To check the status
 $ pegasus_status
 ###  or you can also check with the condor_q command
@@ -358,11 +358,11 @@ Go to the directory  "tutorial-pegasus-namd/Exercises/MtimesNseqEx4". All the in
 
 #### References
 
-*   Pegasus Documentation Pegasus documentation page.
+*   [Pegasus Documentation Pegasus documentation page](https://pegasus.isi.edu/wms/docs/latest/)
 
-*   OSG  QuickStart.   Getting started with the Open Science Grid (OSG).
+*   [OSG QuickStart. Getting started with the Open Science Grid (OSG)](https://confluence.grid.iu.edu/display/CON/Home)
 
-*   Condor Manual.    Manual for the high throughput condor (HTCondor)  software to schedules the jobs on OSG. 
+*   [HTCondor Manual. Manual for the High Throughput Condor software to schedules the jobs on OSG](http://research.cs.wisc.edu/htcondor/manual/v8.2/2_Users_Manual.html)
 
 
 *For further assistance or questions, please email connect-support@opensciencegrid.org.

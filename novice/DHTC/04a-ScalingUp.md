@@ -109,8 +109,8 @@ the `job.log.837` file for tracking the whole cluster.
 Before we continue, let's look at a URL: [your OSG Connect home
 page](http://osgconnect.net/home).  If you have not signed in, you'll be
 redirected back to the main site.  Sign In as you did the first time you
-signed up, and then click again on the [your OSG Connect home link]
-(http://osgconnect.net/home).
+signed up, and then click again on the
+[your OSG Connect home link](http://osgconnect.net/home).
 
 You see a number of graphs and plots here showing things happening
 in OSG Connect.  We'll go over these briefly, then return later.
