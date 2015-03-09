@@ -2,6 +2,7 @@
 layout: lesson
 root: ../..
 title: Introduction to Open Science Grid 
+pdf: OSG_SWC_March2015.pdf
 ---
 <div class="objectives" markdown="1">
 
